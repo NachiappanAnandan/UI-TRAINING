@@ -9,7 +9,7 @@ header{
     background: #42133e;
     color: #f9f7f9;
     padding: auto;
-    height: 120px;
+    height: 150px;
     /* padding-top:35px ; */
    
 }
@@ -17,13 +17,13 @@ header{
 h1{
     font-size:40px;
     text-align: center;
-    padding-top: 35px;
+    padding-top: 52px;
     /* height: 30px; */
 }
 
 .header_img{
-    margin-bottom: 120px;
-    height: 806px;
+    margin-bottom: 86px;
+    height: calc(100vh - 150px)
 }
 
 
@@ -41,7 +41,7 @@ h1{
     /* height: 200px; */
     width: 32%;
     /* background-color: aquamarine; */
-    margin-bottom: 70px;
+    margin-bottom: 86px;
 }
 
 .middle_element{
@@ -57,20 +57,20 @@ h1{
 .article_heading{
     font-size: 35px;
     font-weight: 300;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .article_location{
     font-size: 18px;
     font-weight: 900;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .article_para{
     font-size: 19px;
     margin-bottom: 20px;
     font-weight: 300;   
-    line-height: 24px;
+    line-height: 23px;
     letter-spacing: .2px;
 }
 
@@ -87,7 +87,7 @@ button{
 .purple_color{
     color: #7a1655;
     font-size: 70px;
-    margin: 50px 0 50px;
+    margin:  50px 0 50px;
     text-align: center;
     font-weight: 300;
 }
@@ -99,16 +99,16 @@ button{
     margin: auto;
     text-align: justify;
     font-weight: 300;
-    line-height: 1.6em;
+    line-height: 1.7em;
     letter-spacing: 1.8px;
 }
 
 .FooterPara{
-    margin-bottom: 70px;
+    margin-bottom: 90px;
 }
 
 footer{
-    height:100px;
+    height:110px;
     background: #7a1655;
     color: #f9f7f9;
 }
