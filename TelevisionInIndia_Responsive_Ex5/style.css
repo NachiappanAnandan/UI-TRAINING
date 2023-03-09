@@ -1,0 +1,104 @@
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+
+/* header */
+header {
+  height: 87px;
+  background-color: #145f94;
+  padding: 30px 0;
+  text-align: center;
+}
+
+header > h3 {
+  color: aliceblue;
+  font-size: 22px;
+}
+
+
+
+/*  */
+section {
+  width: 83.3%;
+  margin: 37px auto 0;
+}
+
+.TV_container {
+  border: 1px solid black;
+  background: #f6f6f6;
+}
+
+.TV_container > p {
+  /* background-color: aqua; */
+  width: 100%;
+  height: calc(100% - 55px);
+  padding: 20px 27px;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+  line-height: 1.53;
+  text-align: justify;
+}
+
+.float_left {
+  float: left;
+}
+.float_right {
+  float: right;
+
+}
+
+.doordharshan {
+  max-width: 877px;
+  margin-bottom: 20px;
+  /* background: yellow; */
+}
+
+.sunnetwork {
+  
+  max-width: 540px;
+  /* background-color: pink; */
+  margin-bottom: 25px;
+}
+
+.sonyNetwork {
+
+  max-width: 877px;
+  margin-bottom: 21px;
+  /* background: red; */
+ 
+}
+
+.starnetwork {
+  /* background-color: pink; */
+  max-width: 540px;
+  margin-bottom: 21px;
+}
+
+.zeenetwork {
+  /* background-color: aliceblue; */
+  max-width: 877px;
+ 
+}
+
+.card_header {
+  height: 55px;
+  color: #fff;
+  background: #145f94;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 17px 30px;
+}
+
+
+@media only screen and (max-width: 376px) {
+  .TV_container{
+    width: 100%;
+  }
+}
