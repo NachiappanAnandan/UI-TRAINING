@@ -6,8 +6,6 @@
   font-family: 'Poppins', sans-serif;
   font-family: 'Roboto', sans-serif;
 }
-
-
 /* header */
 header {
   height: 85px;
@@ -23,12 +21,17 @@ header > h3 {
   letter-spacing: .2px;
 }
 
-
-
-/*  */
 section {
   width: 83.3%;
   margin: 37px auto 0;
+  background: #000;
+  height: 500px;
+}
+
+.TV_container{
+  background-color: aqua;
+  /* height: 200px; */
+  clear: both;
 }
 
 .TV_container >div >div {
@@ -38,7 +41,7 @@ section {
 }
 
 .TV_container  p {
-  /* background-color: aqua; */
+ 
   width: 100%;
   height: calc(100% - 55px);
   padding: 20px 27px;
@@ -58,8 +61,6 @@ section {
   width: 545px;
 
 }
-
-
 
 .card_header {
   height: 55px;
