@@ -2,7 +2,6 @@
     margin:0;
     padding: 0%;
     font-family: 'Roboto', sans-serif;
-    /* box-sizing: border-box; */
 }
 
 header{
@@ -10,15 +9,13 @@ header{
     color: #f9f7f9;
     padding: auto;
     height: 150px;
-    /* padding-top:35px ; */
    
 }
 
 h1{
     font-size:40px;
     text-align: center;
-    padding-top: 52px;
-    /* height: 30px; */
+    padding-top: 52px;  
 }
 
 .header_img{
@@ -28,19 +25,14 @@ h1{
 
 
 .parent_container{
-    width: 85%;
-    /* background: pink; */
+    width: 85; 
     margin: 0 auto;
-    /* background: yellow; */
    
 }
 
 .articles_container{
     display: inline-block;
-    /* margin: 0 1.5%; */
-    /* height: 200px; */
     width: 32%;
-    /* background-color: aquamarine; */
     margin-bottom: 86px;
 }
 
@@ -56,7 +48,7 @@ h1{
 
 .article_heading{
     font-size: 35px;
-    font-weight: 300;
+    font-weight: 270;
     margin-bottom: 12px;
 }
 
@@ -70,7 +62,7 @@ h1{
     font-size: 19px;
     margin-bottom: 20px;
     font-weight: 300;   
-    line-height: 23px;
+    line-height: 24px;
     letter-spacing: .2px;
 }
 
@@ -93,7 +85,6 @@ button{
 }
 
 .final_para{
-    /* background: pink; */
     font-size: 25px;
     width: 87%;
     margin: auto;
