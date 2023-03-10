@@ -2,14 +2,15 @@
   margin: 0%;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 
 /* header */
 header {
-  height: 87px;
+  height: 85px;
   background-color: #145f94;
   padding: 30px 0;
   text-align: center;
@@ -17,7 +18,9 @@ header {
 
 header > h3 {
   color: aliceblue;
-  font-size: 22px;
+  font-size: 21.5px;
+  font-weight: 500;
+  letter-spacing: .2px;
 }
 
 
@@ -28,12 +31,13 @@ section {
   margin: 37px auto 0;
 }
 
-.TV_container {
-  border: 1px solid black;
+.TV_container >div >div {
   background: #f6f6f6;
+  border: 1.5px #145f94 solid;
+  margin-bottom: 22px;
 }
 
-.TV_container > p {
+.TV_container  p {
   /* background-color: aqua; */
   width: 100%;
   height: calc(100% - 55px);
@@ -41,50 +45,21 @@ section {
   font-size: 17px;
   letter-spacing: 0.2px;
   font-weight: 400;
-  line-height: 1.53;
+  line-height: 1.55;
   text-align: justify;
 }
 
 .float_left {
   float: left;
+  width: 877px;
 }
 .float_right {
   float: right;
+  width: 545px;
 
 }
 
-.doordharshan {
-  max-width: 877px;
-  margin-bottom: 20px;
-  /* background: yellow; */
-}
 
-.sunnetwork {
-  
-  max-width: 540px;
-  /* background-color: pink; */
-  margin-bottom: 25px;
-}
-
-.sonyNetwork {
-
-  max-width: 877px;
-  margin-bottom: 21px;
-  /* background: red; */
- 
-}
-
-.starnetwork {
-  /* background-color: pink; */
-  max-width: 540px;
-  margin-bottom: 21px;
-}
-
-.zeenetwork {
-  /* background-color: aliceblue; */
-  max-width: 877px;
- 
-}
 
 .card_header {
   height: 55px;
@@ -92,13 +67,6 @@ section {
   background: #145f94;
   width: 100%;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 17px 30px;
-}
-
-
-@media only screen and (max-width: 376px) {
-  .TV_container{
-    width: 100%;
-  }
 }
