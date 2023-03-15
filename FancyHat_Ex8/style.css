@@ -31,6 +31,7 @@ img{
     
 
 }
+
 h1 {
     font-size: 80px;
     color: white;
@@ -38,7 +39,10 @@ h1 {
     position: relative;
     top: 40px;
     font-weight: 600;
+    opacity: 1;
+
 }
+
 
 .year {
     display: inline-block;
@@ -80,6 +84,7 @@ h1 {
     justify-content: center;
    margin:0  auto;
    width: 35%;
+    transition: transform 1s 1s ease-in;
  
 }
 
@@ -88,22 +93,9 @@ h1 {
     transform: translateX(270px);
 }
 
-/* .menuIconContainer:hover>ul>figure{
-   
-    transition: width 1s ease-in-out 1s;
-} */
-
-
-/* menu animation */
-
-
-/* @keyframes menuAppear {
-    100%{
-        
-    }
-} */
-
-
+.menuIconContainer:hover>ul>figure{
+    transform: rotate(360deg);
+}
 
 
 
@@ -160,7 +152,7 @@ h1 {
     right: 20px;
     height: 100px;
     width: 200px;
-    /* background-color: white; */
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: end;
