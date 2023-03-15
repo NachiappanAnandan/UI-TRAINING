@@ -2,10 +2,11 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    /* font-family: 'Nunito', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto', sans-serif; */
+
+    
+}
+
+body{
     font-family: sans-serif;
 }
 
@@ -37,8 +38,6 @@ h1 {
     position: relative;
     top: 40px;
     font-weight: 600;
-    opacity: 0;
-    animation: opacityChange 1s  1 forwards ease-in;
 }
 
 .year {
@@ -88,6 +87,27 @@ h1 {
     /* display: block; */
     transform: translateX(270px);
 }
+
+/* .menuIconContainer:hover>ul>figure{
+   
+    transition: width 1s ease-in-out 1s;
+} */
+
+
+/* menu animation */
+
+
+/* @keyframes menuAppear {
+    100%{
+        
+    }
+} */
+
+
+
+
+
+
 
 
 .menuIconContainer>ul>li>a{
