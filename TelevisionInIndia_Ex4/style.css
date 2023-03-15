@@ -2,11 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+}
+
+body{
   font-family: 'Nunito', sans-serif;
   font-family: 'Poppins', sans-serif;
   font-family: 'Roboto', sans-serif;
 }
-
 
 /* header */
 header {
@@ -31,7 +34,18 @@ section {
   margin: 37px auto 0;
 }
 
-.TV_container >div >div {
+.left_section {
+  float: left;
+  width: 61%;
+}
+.right_section {
+  float: right;
+  width: 37.5%;
+
+}
+
+
+.Total_container >div >div {
   background: #f6f6f6;
   border: 1.5px #145f94 solid;
   margin-bottom: 22px;
@@ -49,7 +63,7 @@ section {
 }
 
 
-.TV_container  p {
+.Total_container  p {
   width: 100%;
   /* height: calc(100% - 55px); */
   padding: 20px 27px;
@@ -60,14 +74,5 @@ section {
   text-align: justify;
 }
 
-.float_left {
-  float: left;
-  width: 61%;
-}
-.float_right {
-  float: right;
-  width: 37.5%;
-
-}
 
 
