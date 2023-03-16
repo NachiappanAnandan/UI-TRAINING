@@ -1,0 +1,219 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: rgb(42, 43, 48);
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    /* background-color: green; */
+    width: 100%;
+}
+
+header>img {
+    width: 11%;
+    margin: 4.5% 0 0 8.2%;
+}
+
+main{
+    margin-bottom: 60px;
+}
+.menuHoverLayer {
+    position: relative;
+    margin-left: 70%;
+    display: inline-block;
+    padding-bottom: 10px;
+    box-sizing: content-box;
+
+}
+
+
+/* Hover menu */
+
+#menuIcon {
+
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    /* background-color: blue; */
+    background: rgb(216,216,216);
+
+}
+
+
+.menuHoverLayer>div>ul {
+    display: none;
+    position: absolute;
+    z-index: 1  ;
+    width: 265px;
+    background: #fff;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: -200px;
+    padding: 10px 0;
+
+
+}
+
+
+.menuHoverLayer li {
+    list-style: none;
+
+}
+
+.menuHoverLayer a {
+    display: block;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.menuHoverLayer a:hover {
+    background: rgb(135, 132, 132);
+}
+.menuHoverLayer:hover ul{
+  display: block;
+}
+
+/* main  */
+
+main {
+    width: 84.5%;
+    /* background-color: aquamarine; */
+    margin: 50px 7.25% 0 8.25%;
+}
+
+/* every article */
+
+main>article {
+    width: 22.5%;
+    /* background: white; */
+    display: inline-block;
+    margin-bottom: 100px;
+
+}
+
+article:not(article:nth-child(4n+4)) {
+    margin-right: 3.33333%;
+}
+
+
+
+
+/* contents in article */
+
+.clothImage {
+    display: block;
+    height: 415px;
+    width: 100%;
+    background: rgb(36, 37, 42);
+    position: relative;
+}
+
+/* size cirlce */
+
+.clothImage div:last-child {
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    bottom: -22.5px;
+    margin-left: 76%;
+    background: rgb(144, 176, 133);
+    text-align: center;
+    padding-top: 14px;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(17,17,17);
+
+}
+
+/* Star */
+
+.clothImage span {
+    font-size: 25px;
+    font-weight: 800;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: rgb(144, 176, 133);;
+}
+
+/* cloth image */
+
+.clothImage>img {
+    display: block;
+    position: relative;
+    min-width: 55%;
+    max-width:70%;
+    height: 245px;
+    top: 100px;
+    margin: 0 auto;
+}
+
+.ClothDetails {
+    width: 100%;
+    height: 50px;
+    margin-top: 18px;
+
+}
+
+.ClothDetails>h1 {
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(252,252,252);
+}
+
+.ClothDetails>p {
+    margin-top: 2px;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgb(135,135,135);
+}
+
+.ClothDetails+button {
+    font-size: 16px;
+    font-weight:500 ;
+    color: rgb(135,135,135);
+    margin-top: 18px;
+    padding: 10px 20px;
+    border: 2px solid rgb(135,135,135);
+    background: transparent;
+    cursor: pointer;
+
+}
+/* footer */
+
+footer{
+
+    height: 90px;
+    width: 100%;
+    background: #000;
+    padding: 30px 0;
+    position: fixed;
+    bottom: 0;
+}
+
+footer ul{
+    max-width: fit-content;
+    margin: 0 auto;
+    display: block; 
+}
+footer li{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 30px;
+}
