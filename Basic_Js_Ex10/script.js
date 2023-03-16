@@ -34,7 +34,7 @@ console.log("Sorted team  \n"  + cricketTeam);
 // for (let index = 0; index < cricketTeam.length; index++) {
 //    console.log();
 // }
-for(player of cricketTeam) console.log( player+ "-"+ Math.round(Math.random()*100));
+for(player of cricketTeam) console.log( player+ "-"+ Math.round(Math.random()*101));
 
 
 var upperCaseNames= cricketTeam.map(player => player.toUpperCase())
@@ -57,12 +57,12 @@ function displayNumber(){
 
 // display current date
 
-const CurrentDate = () => {
+const currentDate = () => {
    var date= new Date();
    console.log(date.getDate()+"/"+date.getMonth()+1+"/"+date.getFullYear());
 };
 
-const ConvertCelsius = celcius => (celcius*9/5)+32
+const convertCelsius = celcius => (celcius*9/5)+32
 
 var average = function(arr){
     var total = 0;
@@ -84,9 +84,9 @@ function reverseString(string){
 var celcius = 90;
 
 
-CurrentDate();
+currentDate();
 
-console.log("celcius =  "+ celcius+  " farenheit = " + ConvertCelsius(celcius) );
+console.log("celcius =  "+ celcius+  " farenheit = " + convertCelsius(celcius) );
 
 
 
