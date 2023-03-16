@@ -15,8 +15,8 @@ var Calculator= {
     }
 }
 
-Calculator.num1= 90
-Calculator.num2= 10
+Calculator.num1= 7
+Calculator.num2= 3
 
 console.log(Calculator.num1 +" + "+Calculator.num2+ " = "+Calculator.add());
 console.log(Calculator.num1 +" - "+Calculator.num2+ " = "+Calculator.subtract());
