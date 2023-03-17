@@ -1,0 +1,236 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 900px;
+    border-radius: 10px;
+    background: #1f1f1f;
+    width: 900px;
+    position: relative;
+    animation: close 5s 26s linear forwards;
+}
+
+
+.board {
+    width: 100px;
+    border: pink solid 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 5%;
+    left: 400px;
+    animation: moveBoard1 2s 2s ease-in-out forwards , moveBoard2 2s 6s ease-in-out forwards , moveBoard3 2s 10s ease-in-out forwards , moveBoard4 2s 14s ease-in-out forwards ,moveBoard5 2s 18s ease-in-out forwards ,moveBoard6 2s 22s ease-in-out forwards ,moveBoard7 2s 26s ease-in-out forwards,close 5s 26s linear forwards;
+}
+
+.holder {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+
+.block {
+    height: 50px;
+    width: 80%;
+    background: #746f6f;
+    border-radius: 20px;
+    color: aliceblue;
+}
+
+.ball {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: calc(5% + 20px);
+    background: lightgreen;
+    animation: moveball1 4s 1 forwards ease-in-out , moveball2 4s 4s 1 forwards ease-in-out , moveball3 4s 8s 1 forwards ease-in-out ,moveball4 4s 12s 1 forwards ease-in-out,moveball5 4s 16s 1 forwards ease-in-out,moveball6 4s 20s 1 forwards ease-in-out,moveball7 4s 24s 1 forwards ease-in-out ,close 5s 26s linear forwards;
+    /* animation:  */
+
+
+}
+
+
+.holder>.block:nth-child(7){
+   animation: colorChange .5s 2s 1 forwards ease-in-out;
+   /* background-color: aqua; */
+}
+.holder>.block:nth-child(6){
+    animation: colorChange .5s 6s 1 forwards ease-in-out;
+ }
+ .holder>.block:nth-child(5){
+    animation: colorChange .5s 10s 1 forwards ease-in-out;
+ }
+ .holder>.block:nth-child(4){
+    animation: colorChange .5s 14s 1 forwards ease-in-out;
+ }
+ .holder>.block:nth-child(3){
+    animation: colorChange .5s 18s 1 forwards ease-in-out;
+ }
+ .holder>.block:nth-child(2){
+    animation: colorChange .5s 22s 1 forwards ease-in-out;
+ }
+ .holder>.block:nth-child(1){
+    animation: colorChange .5s 26s 1 forwards ease-in-out;
+ }
+
+
+
+
+ /* move ball */
+
+@keyframes moveball1 {
+    50% {
+        bottom: 53%;
+        left: 50%;
+    }
+
+    100% {
+        bottom: calc(5% + 20px);
+        left: 20%;
+    }
+}
+
+@keyframes moveball2 {
+    50% {
+        bottom: 59%;
+        left: 50%;
+    }
+
+    100% {
+        bottom: calc(5% + 20px);
+        left: 80%;
+    }
+}
+
+@keyframes moveball3 {
+    50% {
+        bottom: 65%;
+        left: 60%;
+    }
+
+    100% {
+        bottom: calc(5% + 20px);
+        left: 30%;
+    }
+}
+
+@keyframes moveball4 {
+    50% {
+        bottom: 71%;
+        left: 25%;
+    }
+
+    100% {
+        bottom: calc(5% + 20px);
+        left: 10%;
+    }
+}
+
+@keyframes moveball5 {
+    50% {
+        bottom: 77%;
+        left: 75%;
+    }
+
+    100% {
+        bottom: calc(5% + 20px);
+        left: 50%;
+    }
+}
+
+
+@keyframes moveball6 {
+    50% {
+        bottom: 83%;
+        left: 40%;
+    }
+
+    100% {
+        bottom: calc(5% + 20px);
+        left: 70%;
+    }
+}
+
+@keyframes moveball7 {
+    50% {
+        bottom: 89%;
+        left: 80%;
+    }
+
+    100% {
+        bottom: calc(5% + 20px);
+        left: 20%;
+    }
+}
+
+
+/* board movement */
+@keyframes moveBoard1 {
+    100%{
+        left: 19%;
+    }
+}
+@keyframes moveBoard2 {
+    100%{
+        left: 74%;
+    }
+}
+
+@keyframes moveBoard3 {
+    100%{
+        left: 21%;
+    }
+}
+
+@keyframes moveBoard4 {
+    100%{
+        left: 2%;
+    }
+}
+
+@keyframes moveBoard5 {
+    100%{
+        left: 42%;
+    }
+}
+
+@keyframes moveBoard6 {
+    100%{
+        left: 67%;
+    }
+}
+
+@keyframes moveBoard7 {
+    100%{
+        left: 12%;
+    }
+}
+
+
+
+ 
+@keyframes colorChange {
+    100% {
+        background: rgb(131, 179, 131);
+        opacity: 0;
+    }
+}
+
+@keyframes close {
+    100%{
+        height: 0;
+        width: 0;
+    }
+}
