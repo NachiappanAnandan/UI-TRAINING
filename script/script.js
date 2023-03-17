@@ -52,7 +52,7 @@ const convertCelsius = celcius => (celcius*9/5)+32;
 
 //find average
 var average = function(arr){
-   return ((arr.reduce((prev ,current) => prev+current ))/arr.length).toFixed(2);
+   return (arr.reduce((total ,next) => total+next)/arr.length).toFixed(2);
 }
 
 //reverse string
