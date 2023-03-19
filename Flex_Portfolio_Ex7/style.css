@@ -2,16 +2,12 @@
 * {
     margin: 0%;
     padding: 0;
-    box-sizing: border-box;
-   
+
 }
 
 img {
     max-width: 100%;
 }
-
-
-
 /* Body */
 
 body { 
@@ -21,15 +17,15 @@ body {
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
-    row-gap: 160px;
-    font-family: 'Oswald';
+    row-gap: 153px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Intro section */
 .introSection {
     display: flex;
     flex-direction: column;
-    row-gap: 85px;
+    row-gap: 135px;
 }
 
 /* email */
@@ -45,25 +41,25 @@ body {
 
 .email>h2 {
     font-weight: 600;
-    font-size: 1.6rem;
-    letter-spacing: .5px;
+    font-size: 25px;
 }
 
-/* name */
+/* name and role */
 .intro{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
    
 
 }
 .name {
     display: flex;
     align-content: start;
-    font-size: 170px;
-    font-weight: 600;
-    letter-spacing: 5px;
+    font-size: 150px;
+    font-weight: 500;
+
     color: white;
 }
 .name>div{
@@ -83,20 +79,20 @@ body {
     color: rgb(92, 142, 220);
 }
 
-/* ,images
- */
+/* ,images*/
 
 main{
-    min-height: 300px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    column-gap: 30px;
     row-gap: 35px;
-    width: 79%;
+    width: 79.4%;
 }
 
 main >figure{
-    width: 31.5%;
+    /* width: 31.5%; */
+    width: 31.8%;
 
 }
 
@@ -105,7 +101,7 @@ main >figure{
 .thirdSection{
     display: flex;
     flex-direction: column;
-    gap: 200px;
+    gap: 280px;
 }
 
 
@@ -115,38 +111,56 @@ main >figure{
 .logoSection{
     display: flex;
     flex-direction: column; 
-}
-
-.logoSection>div{
-    /* background: lightcoral; */
-    height: 300px;
-    display: flex;
-    justify-content: space-between;
+    gap: 95px;
+    justify-content: center;
     align-items: center;
-    /* gap: 50px; */
+    
 }
-.logoSection>div>figure{
-    width: 11%;
-}
-
-.logoSection>div>figure:nth-child(3){
-    flex-basis: 90px;
-    flex-shrink: 1;
-}
-
 .logoSection>h1{
     color: rgb(204, 204, 204);
     text-align: center;
-    font-size: 50px;
-    font-weight: 500;
-    letter-spacing: 2px;
+    font-size: 47px;
+    font-weight: 600;
 }
 
 .logoSection>h1>span{
     color: rgb(195, 232, 145);
 }
+/* Logo container */
 
-.iconSection{
+
+.logoSection>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+
+    
+}
+.logoSection>div>figure{
+    width: 11%;
+    flex-grow: 0;
+
+}
+
+.spotify , .ikea{
+    flex-basis: 145px;
+}
+.audi{
+    flex-basis: 120px;
+}
+.addidas{
+    flex-basis: 90px;
+    flex-shrink: 0;
+}
+.lufthansa{
+flex-basis: 160px;
+}
+.mont_blanc{
+    flex-basis: 117px;
+}
+
+.finalSection{
     display: flex;
     flex-direction: column;
     gap: 115px;
@@ -168,6 +182,14 @@ main >figure{
     width: 225px;
 }
 
+.iconSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+
+}
 
 .iconContainer{
     display: flex;
@@ -183,12 +205,15 @@ main >figure{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 i{
     color: white;
     font-size: 30px
 }
+/* final quote
+ */
 
 .finalQuote{
     font-size: 25px;
@@ -200,18 +225,25 @@ i{
 
 
 
+/* styles for mobile view */
+
 @media  screen and (max-width:447px) {
     body {
         justify-content: center;
         align-items: center;
-        row-gap: 100px;
+        row-gap: 120px;
     }
     .introSection{
-        margin-top: 250px;
+        margin-top: 255px;
         flex-direction: column-reverse;
+        gap: 25px;
+    }
+
+    .intro{
+        gap: 20px;
     }
     .name{
-        font-size: 50px;
+        font-size: 55px;
     }
     .role{
         font-size: 35px;
@@ -245,58 +277,76 @@ i{
         justify-content: center;
     
     }
-
+    .thirdSection{
+        margin-top: -35px;
+        gap: 190px;
+    }
     .logoSection{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 150px;
+        gap: 90px;
     }
-
     .logoSection>h1{
-        font-size: 32px;
-        letter-spacing: 1px;
+        font-size: 35px;
     }
-
     .logoSection>div{
-        width: 75%;
-        display: flex;
+        justify-content: space-evenly;
         flex-wrap: wrap;
-        gap: 70px;
-      row-gap: 30px;
-   }
-
-    .logoSection>div>figure{
-        width: 35%;
+        column-gap: 100px;
+        row-gap: 100px;
+    }
+    .spotify {
+        flex-basis: 115px
+    }
+    .audi, .mont_blanc{
+        flex-basis: 100px;
+    }
+    .addidas{
+        flex-basis: 70px;
+        flex-shrink: 0;
+        margin-left: 20px;
+    }
+    .lufthansa{
+    flex-basis: 132px;
+    }
+    .ikea{
+        flex-basis: 120px;
+    }   
+    
+    .finalSection{
+        gap: 55px;
     }
 
-
-    .thirdSection{
-        gap: 250px;
-    }
     .divider{
         gap: 25px;
     }
     .divider>div:nth-child(1){
-       
-        width: 20px;
+        width: 25px;
     }
-    
     .divider>div:nth-child(2){
-        border: .5px solid white;
-        width: 150px;
+        width: 145px;
+    }
+
+    .iconContainer{
+        width: 100%;
+        justify-content: space-around;
     }
     
-    .iconContainer{
-        width: 90%;
+    .iconContainer>div{
+        height: 60px;
+        width: 60px;
+        border:white solid 2px;
+    }
+    i{
+        font-size: 40px;
     }
 
-
-    .iconSection{
-        align-items: center;
-        gap: 70px;
-    }
     .finalQuote{
-        margin-bottom: 50px;
+        margin-top: -20px;
+        margin-bottom: 60px;
     }
+    
+    
+    
 }
