@@ -2,12 +2,11 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+   
 
-    
 }
-
 body{
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif; 
 }
 
 main{
@@ -18,8 +17,10 @@ main{
 
 img{
     max-width: 100%;    
+    
 }
 
+/* Layer opacity for background */
 .layer{
     position: absolute;
     height: 100vh;
@@ -31,7 +32,7 @@ img{
     
 
 }
-
+/* rotated text */
 h1 {
     font-size: 80px;
     color: white;
@@ -39,25 +40,24 @@ h1 {
     position: relative;
     top: 40px;
     font-weight: 600;
-    opacity: 1;
-
+    opacity: 0;
+    animation: opacityChange 1s  1 forwards ease-in;
 }
-
 
 .year {
     display: inline-block;
     position: absolute;
     top: 20%;
-    right: -6%;
+    right: -8%;
     gap: 15px;
-    font-size: 110px;
+    font-size: 140px;
     font-weight: 600;
     color: white;
     transform: rotate(270deg);
 }
 
 .year>span:nth-child(1) {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 
@@ -72,40 +72,40 @@ h1 {
     position: absolute;
     left:-270px;
     border-radius: 0 20px 20px 0;
+    padding: 40px 0 20px;
     width: 270px;
     background: #000;
     color: white;
+    /* Transition for menu */
     transition: transform 1s ease-in  ;
+    list-style: none;
+    
 
 }
 .menuIconContainer>ul>figure{
-    padding: 30px 0;
+    padding: 10px 0 30px;
     display: flex;
     justify-content: center;
-   margin:0  auto;
-   width: 35%;
-    transition: transform 1s 1s ease-in;
+    margin:0  auto;
+    width: 100px;
  
 }
 
 .menuIconContainer:hover>ul{
-    /* display: block; */
     transform: translateX(270px);
 }
+
 
 .menuIconContainer:hover>ul>figure{
     transform: rotate(360deg);
 }
 
 
-
-
-
-
 .menuIconContainer>ul>li>a{
     display: block;
-    padding: 10px 0;
-    font-size: 1rem;
+    padding:   13px  0;
+    font-size: 22px;
+    font-weight: 300;
     text-decoration: none;
     text-align: center;
     color: white;
@@ -116,23 +116,30 @@ h1 {
 }
 
 
-.menuIconContainer>div {
-    color: white;
+.iconBg {
     background: #000;
-    height: 90px;
-    width: 90px;
+    color: white;
+    height: 100px;
+    width: 100px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 7px;
     font-size: 30px;
-   
+}
+.iconBg>div{
+    width: 35px;
+    border: 1.5px solid white;
+    border-radius: 2px;
 }
 
+/* bottom quote */
 
 .quote{
     position: absolute;
     left:35%;
-    bottom: 0;
+    bottom: 50px;
     color: white;
     font-size: 90px;
     font-weight: 600;
@@ -146,23 +153,23 @@ h1 {
     font-size:140px ;
 }
 
+/* bottom icons */
 .bottomIcon{
     position: absolute;
     bottom:  0%;
     right: 20px;
     height: 100px;
     width: 200px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: end;
     gap: 15px;
    
-
-
 }
 
 .bottomIcon>i{
     font-size: 40px;
     color: white;
 }
+
+
