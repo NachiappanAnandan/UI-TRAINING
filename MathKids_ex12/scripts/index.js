@@ -5,7 +5,7 @@ var value;
 
 // loacal object
 var selectedValue = {
-  shape: "",
+  index: null,
   section: 1,
   value: 0,
 };
@@ -33,23 +33,33 @@ let commonSection = document.createElement("section");
 // create h1
 const createH1 = (text) => {
   let h1 = document.createElement("h1");
-  h1.innerHTML = text;
+  h1.textContent = text;
   return h1;
 };
 
 // create button
 const createButton = (text, id) => {
   let button = document.createElement("button");
-  button.innerHTML = text;
+  button.textContent = text;
   button.id = id;
   if (id === "next") button.className = id;
 
   commonSection.appendChild(button);
 };
 
+// create Elememt
+
+const createElement = (elementType , className , content = ""  ) => {
+  let element = document.createElement(elementType);
+  element.className = className;
+  if(content!=""){
+    element.appendChild(content);
+  }
+  return element;
+}
 // clear section
 const clearElement = (element) => {
-  element.innerHTML = "";
+  element.replaceChildren();
 };
 
 // section 1
@@ -60,23 +70,17 @@ const sectionOne = (value) => {
   // add class
   commonSection.className = "ChooseShape";
   // h1
-  commonSection.appendChild(createH1("1.Choose any one"));
+  commonSection.appendChild(createH1("1. Choose a Shape"));
 
   // shapes
   let shapesContainer = document.createElement("div");
   shapesContainer.classList.add("shapes_holder");
-  for (const shape of Object.keys(shapes)) {
-    console.log(Object.keys(shape));
-    let shapeDiv = document.createElement("div");
-    shapeDiv.classList.add(shape);
-    let tick = document.createElement("i");
-    tick.className = "fa-solid fa-check tick";
-
-    shapeDiv.appendChild(tick);
+  for (const shape of shapes) {
+    let tick = createElement("i" , "fa-solid fa-check tick"  );
+    let shapeDiv = createElement("div" , shape.class , tick)
     shapesContainer.appendChild(shapeDiv);
   }
   commonSection.appendChild(shapesContainer);
-
   // button
   createButton("NEXT", "next");
   mainContainer.appendChild(commonSection);
@@ -84,25 +88,25 @@ const sectionOne = (value) => {
   // CALCULATION
   // select shape
   const selectedShape = document.querySelectorAll(".shapes_holder > div");
-  // loading time tick
-  selectedShape.forEach((i) => {
-    if (i.className === value.shape) {
-      i.getElementsByTagName("i")[0].classList.add("tickAppear");
-      commonSection.getElementsByTagName("button")[0].style.display =
-        "inline-block";
-    }
+  var previousElement;
+  selectedShape.forEach((i , index) => {
     // tick on click
-    i.addEventListener("click", (e) => {
-      selectedShape.forEach((el) =>
-        el.getElementsByTagName("i")[0].classList.remove("tickAppear")
-      );
+    i.addEventListener("click", () => {
+      if(!previousElement){
+        previousElement =i;
+      }else{
+        console.log(previousElement);
+        previousElement.getElementsByTagName("i")[0].classList.remove("tickAppear");
+        previousElement = i;
+      }
       i.getElementsByTagName("i")[0].classList.add("tickAppear");
-      commonSection.getElementsByTagName("button")[0].style.display =
-        "inline-block";
-      selectedValue.shape = i.className;
+      commonSection.getElementsByTagName("button")[0].style.visibility =
+      "visible";
+      selectedValue.index = index;
       setLocalStorage();
     });
   });
+
   // button onclick event  (next button)
   const button = document.getElementsByTagName("button")[0];
   button.addEventListener("click", () => {
@@ -122,16 +126,14 @@ const sectionTwo = (selectedValue) => {
   // h1
   console.log();
   commonSection.appendChild(
-    createH1("2. Enter " + shapes[selectedValue.shape].heading)
+    createH1("2. Enter " + shapes[selectedValue.index].heading)
   );
   // input
-  const inputElement = document.createElement("input");
-  inputElement.type = "number";
-  inputElement.className = "getInput";
-  commonSection.appendChild(inputElement);
+  const inputelement = createElement("input" , "getInput");
+  inputelement.type = "number"
+  commonSection.appendChild(inputelement);
   createButton("CALCULATE", "calculate");
   mainContainer.appendChild(commonSection);
-
   const button = document.getElementsByTagName("button")[0];
   button.addEventListener("click", () => {
     selectedValue.value = document.getElementsByTagName("input")[0].value;
@@ -152,24 +154,16 @@ const sectionThree = (value) => {
   //common section
   commonSection.className = "Result";
   // Result shape
-  let resultShape = document.createElement("div");
-  resultShape.className = "ResultShape";
-
   // correct shape
-  let correctShape = document.createElement("div");
-  correctShape.className = value.shape;
-  resultShape.appendChild(correctShape);
-
+  let correctShape = createElement("div" ,shapes[value.index].class )
+  let resultShape = createElement("div" , "ResultShape" ,correctShape )
   //display result
-  let displayResult = document.createElement("div");
-  displayResult.className = "displayResult";
+  let displayResult = createElement("div" , "displayResult")
   resultShape.appendChild(displayResult);
-
   //   h1
-  displayResult.appendChild(createH1(shapes[value.shape].name));
-
+  displayResult.appendChild(createH1(shapes[value.index].name));
   // values in table
-  shapes[value.shape].calculation.forEach((row) => {
+  shapes[value.index].calculation.forEach((row) => {
     let rowDiv = document.createElement("div");
     rowDiv.className = "detailsContainer";
     let col1 = document.createElement("div");

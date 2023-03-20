@@ -1,6 +1,7 @@
 const shapes = [
    {
       name: "CIRCLE",
+      class:"circle",
       heading: "Radius",
       calculation: [
         {
@@ -12,14 +13,14 @@ const shapes = [
         },
         {
           name: "AREA",
-          formula: "π*r*r",
+          formula: "πr²",
           calculate: function (value) {
             return (3.14 * value * value).toFixed(2) + "sq cm";
           },
         },
         {
           name: "PERIMETER",
-          formula: "2*π*r",
+          formula: "2πr",
           calculate: function (value) {
             return (2 * 3.14 * value).toFixed(2) + " cm";
           },
@@ -27,7 +28,8 @@ const shapes = [
       ],
     },
      {
-      name: "EQUILATERAL TRIANGLE ",
+      name: "Equilateral Triangle ",
+      class:"triangle",
       heading: "Side (Base & Height)",
       calculation: [
         {
@@ -39,7 +41,7 @@ const shapes = [
         },
         {
           name: "AREA",
-          formula: "0.433*s*s",
+          formula: "0.433 * s * s",
           calculate: function (value) {
             return (0.433 * value * value).toFixed(2) + " cm";
           },
@@ -55,6 +57,35 @@ const shapes = [
     },
      {
       name: "SQUARE",
+      class:"square",
+      heading: "Side",
+      calculation: [
+        {
+          name: "SIDE",
+          formula: "s",
+          calculate: function (value) {
+            return value + " cm";
+          },
+        },
+        {
+          name: "AREA",
+          formula: "s * s",
+          calculate: function (value) {
+            return (value * value).toFixed(2) + " cm";
+          },
+        },
+        {
+          name: "PERIMETER",
+          formula: "4 * s",
+          calculate: function (value) {
+            return (4 * value).toFixed(2) + " cm";
+          },
+        },
+      ],
+    },
+    {
+      name: "SQUARE",
+      class:"square",
       heading: "Side",
       calculation: [
         {
