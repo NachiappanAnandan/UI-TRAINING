@@ -210,7 +210,8 @@ flex-basis: 160px;
 
 i{
     color: white;
-    font-size: 30px
+    font-size: 30px;
+    cursor: pointer;
 }
 /* final quote
  */
