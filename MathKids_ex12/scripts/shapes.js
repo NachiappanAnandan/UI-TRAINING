@@ -1,5 +1,5 @@
-const shapes = {
-    circle: {
+const shapes = [
+   {
       name: "CIRCLE",
       heading: "Radius",
       calculation: [
@@ -26,7 +26,7 @@ const shapes = {
         },
       ],
     },
-    triangle: {
+     {
       name: "EQUILATERAL TRIANGLE ",
       heading: "Side (Base & Height)",
       calculation: [
@@ -53,7 +53,7 @@ const shapes = {
         },
       ],
     },
-    square: {
+     {
       name: "SQUARE",
       heading: "Side",
       calculation: [
@@ -80,7 +80,7 @@ const shapes = {
         },
       ],
     },
-  };
+  ];
 
   
   export default shapes;

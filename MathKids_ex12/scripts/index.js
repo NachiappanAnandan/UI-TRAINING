@@ -10,7 +10,7 @@ var selectedValue = {
   value: 0,
 };
 
-// SESSION STORAGE
+// LOCAL STORAGE
 const getLocalStorage = () => {
   let temp = localStorage.getItem("backup");
   if (temp == null) {
@@ -66,6 +66,7 @@ const sectionOne = (value) => {
   let shapesContainer = document.createElement("div");
   shapesContainer.classList.add("shapes_holder");
   for (const shape of Object.keys(shapes)) {
+    console.log(Object.keys(shape));
     let shapeDiv = document.createElement("div");
     shapeDiv.classList.add(shape);
     let tick = document.createElement("i");
