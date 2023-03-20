@@ -6,11 +6,11 @@
 
 }
 body{
-    font-family: 'Roboto', sans-serif; 
+    font-family: sans-serif; 
 }
 
 main{
-    height: 100vh;
+    min-height: 110vh;
     background: url(./images/background-image.png)  no-repeat top;
 
 }
@@ -23,7 +23,7 @@ img{
 /* Layer opacity for background */
 .layer{
     position: absolute;
-    height: 100vh;
+    height: 110%;
     width: 100%;
     background-color: black;
     opacity: .3;
@@ -40,8 +40,7 @@ h1 {
     position: relative;
     top: 40px;
     font-weight: 600;
-    opacity: 0;
-    animation: opacityChange 1s  1 forwards ease-in;
+
 }
 
 .year {
@@ -64,7 +63,7 @@ h1 {
 /* menu icon */
 .menuIconContainer{
     position: absolute;
-    top: 50px;
+    top: 45px;
     cursor: pointer;
 }
 
@@ -83,7 +82,7 @@ h1 {
 
 }
 .menuIconContainer>ul>figure{
-    padding: 10px 0 30px;
+    padding: 10px 0 20px;
     display: flex;
     justify-content: center;
     margin:0  auto;
@@ -103,8 +102,8 @@ h1 {
 
 .menuIconContainer>ul>li>a{
     display: block;
-    padding:   13px  0;
-    font-size: 22px;
+    padding:   12px  0;
+    font-size: 19px;
     font-weight: 300;
     text-decoration: none;
     text-align: center;
@@ -119,13 +118,13 @@ h1 {
 .iconBg {
     background: #000;
     color: white;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 6px;
     font-size: 30px;
 }
 .iconBg>div{
