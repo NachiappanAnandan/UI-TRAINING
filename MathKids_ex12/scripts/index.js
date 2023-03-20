@@ -271,6 +271,7 @@ const sectionThree = (value) => {
   button.addEventListener("click", () => {
     selectedValue.section = 1;
     selectedValue.value = 0;
+    selectedValue.shape = ""
     setLocalStorage();
     sectionOne(selectedValue);
   });
