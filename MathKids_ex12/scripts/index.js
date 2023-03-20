@@ -1,88 +1,7 @@
+import shapes from "./shapes.js";
+
 // Data object
 var value;
-const shapes = {
-  circle: {
-    name: "CIRCLE",
-    heading: "Radius",
-    calculation: [
-      {
-        name: "RADIUS",
-        formula: "r",
-        calculate: function () {
-          return value + " cm";
-        },
-      },
-      {
-        name: "AREA",
-        formula: "π*r*r",
-        calculate: function () {
-          return (3.14 * value * value).toFixed(2) + "sq cm";
-        },
-      },
-      {
-        name: "PERIMETER",
-        formula: "2*π*r",
-        calculate: function () {
-          return (2 * 3.14 * value).toFixed(2) + " cm";
-        },
-      },
-    ],
-  },
-  triangle: {
-    name: "EQUILATERAL TRIANGLE ",
-    heading: "Side (Base & Height)",
-    calculation: [
-      {
-        name: "SIDE",
-        formula: "s",
-        calculate: function () {
-          return value + " cm";
-        },
-      },
-      {
-        name: "AREA",
-        formula: "0.433*s*s",
-        calculate: function () {
-          return (0.433 * value * value).toFixed(2) + " cm";
-        },
-      },
-      {
-        name: "PERIMETER",
-        formula: "3 * s",
-        calculate: function () {
-          return (3 * value).toFixed(2) + " cm";
-        },
-      },
-    ],
-  },
-  square: {
-    name: "SQUARE",
-    heading: "Side",
-    calculation: [
-      {
-        name: "SIDE",
-        formula: "s",
-        calculate: function () {
-          return value + " cm";
-        },
-      },
-      {
-        name: "AREA",
-        formula: "s*s",
-        calculate: function () {
-          return (value * value).toFixed(2) + " cm";
-        },
-      },
-      {
-        name: "PERIMETER",
-        formula: "4 * s",
-        calculate: function () {
-          return (4 * value).toFixed(2) + " cm";
-        },
-      },
-    ],
-  },
-};
 
 // loacal object
 var selectedValue = {
@@ -93,7 +12,7 @@ var selectedValue = {
 
 // SESSION STORAGE
 const getLocalStorage = () => {
-  var temp = localStorage.getItem("backup");
+  let temp = localStorage.getItem("backup");
   if (temp == null) {
     localStorage.setItem("backup", JSON.stringify(selectedValue));
   } else {
@@ -109,11 +28,11 @@ const setLocalStorage = () => {
 // Default main container
 const mainContainer = document.getElementById("main");
 // Section for all
-var commonSection = document.createElement("section");
+let commonSection = document.createElement("section");
 
 // create h1
 const createH1 = (text) => {
-  var h1 = document.createElement("h1");
+  let h1 = document.createElement("h1");
   h1.innerHTML = text;
   return h1;
 };
@@ -144,12 +63,12 @@ const sectionOne = (value) => {
   commonSection.appendChild(createH1("1.Choose any one"));
 
   // shapes
-  var shapesContainer = document.createElement("div");
+  let shapesContainer = document.createElement("div");
   shapesContainer.classList.add("shapes_holder");
   for (const shape of Object.keys(shapes)) {
-    var shapeDiv = document.createElement("div");
+    let shapeDiv = document.createElement("div");
     shapeDiv.classList.add(shape);
-    var tick = document.createElement("i");
+    let tick = document.createElement("i");
     tick.className = "fa-solid fa-check tick";
 
     shapeDiv.appendChild(tick);
@@ -168,7 +87,8 @@ const sectionOne = (value) => {
   selectedShape.forEach((i) => {
     if (i.className === value.shape) {
       i.getElementsByTagName("i")[0].classList.add("tickAppear");
-      commonSection.getElementsByTagName("button")[0].style.display ="inline-block";
+      commonSection.getElementsByTagName("button")[0].style.display =
+        "inline-block";
     }
     // tick on click
     i.addEventListener("click", (e) => {
@@ -231,16 +151,16 @@ const sectionThree = (value) => {
   //common section
   commonSection.className = "Result";
   // Result shape
-  var resultShape = document.createElement("div");
+  let resultShape = document.createElement("div");
   resultShape.className = "ResultShape";
 
   // correct shape
-  var correctShape = document.createElement("div");
+  let correctShape = document.createElement("div");
   correctShape.className = value.shape;
   resultShape.appendChild(correctShape);
 
   //display result
-  var displayResult = document.createElement("div");
+  let displayResult = document.createElement("div");
   displayResult.className = "displayResult";
   resultShape.appendChild(displayResult);
 
@@ -249,16 +169,16 @@ const sectionThree = (value) => {
 
   // values in table
   shapes[value.shape].calculation.forEach((row) => {
-    var rowDiv = document.createElement("div");
+    let rowDiv = document.createElement("div");
     rowDiv.className = "detailsContainer";
-    var col1 = document.createElement("div");
-    var col2 = document.createElement("div");
-    var col3 = document.createElement("div");
+    let col1 = document.createElement("div");
+    let col2 = document.createElement("div");
+    let col3 = document.createElement("div");
     col1.innerHTML = row["name"];
     rowDiv.appendChild(col1);
     col2.innerHTML = row.formula;
     rowDiv.appendChild(col2);
-    col3.innerHTML = row.calculate();
+    col3.innerHTML = row.calculate(value.value);
     rowDiv.appendChild(col3);
     displayResult.appendChild(rowDiv);
   });
@@ -271,7 +191,7 @@ const sectionThree = (value) => {
   button.addEventListener("click", () => {
     selectedValue.section = 1;
     selectedValue.value = 0;
-    selectedValue.shape = ""
+    selectedValue.shape = "";
     setLocalStorage();
     sectionOne(selectedValue);
   });
@@ -291,4 +211,3 @@ window.addEventListener("load", () => {
       break;
   }
 });
-
