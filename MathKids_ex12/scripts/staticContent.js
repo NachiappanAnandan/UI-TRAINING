@@ -1,5 +1,6 @@
 const staticContent  = {
     sectionOne:{
+        class:"ChooseShape",
         heading:"1. Choose a Shape",
         button :{
             text:"NEXT" , 
@@ -7,20 +8,22 @@ const staticContent  = {
         }
     } , 
     sectionTwo:{
+        class:"EnterSide",
         heading:"2. Enter",
         input:{
-            type:"text" , 
+            element:"input" , 
             class: "getInput", 
         },
         button:{
-            class:"calculate" , 
             text: "CALCULATE"
         }
     },
-    sectionTwo:{
+    sectionThree:{
+        class:"Result",
         button:{
-            class:"start_again" , 
             text: "START AGAIN"
         }
     }
 }
+
+export default staticContent;

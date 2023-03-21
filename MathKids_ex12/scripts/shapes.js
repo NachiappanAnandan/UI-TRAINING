@@ -1,6 +1,6 @@
 const shapes = [
    {
-      name: "CIRCLE",
+      name: "Circle",
       class:"circle",
       heading: "Radius",
       calculation: [
@@ -56,7 +56,7 @@ const shapes = [
       ],
     },
      {
-      name: "SQUARE",
+      name: "Square",
       class:"square",
       heading: "Side",
       calculation: [
@@ -83,34 +83,7 @@ const shapes = [
         },
       ],
     },
-    {
-      name: "SQUARE",
-      class:"square",
-      heading: "Side",
-      calculation: [
-        {
-          name: "SIDE",
-          formula: "s",
-          calculate: function (value) {
-            return value + " cm";
-          },
-        },
-        {
-          name: "AREA",
-          formula: "s*s",
-          calculate: function (value) {
-            return (value * value).toFixed(2) + " cm";
-          },
-        },
-        {
-          name: "PERIMETER",
-          formula: "4 * s",
-          calculate: function (value) {
-            return (4 * value).toFixed(2) + " cm";
-          },
-        },
-      ],
-    },
+
   ];
 
   

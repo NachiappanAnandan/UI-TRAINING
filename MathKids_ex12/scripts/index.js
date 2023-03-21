@@ -1,15 +1,14 @@
 import shapes from "./shapes.js";
+import staticContent from "./staticContent.js"
 
 // Data object
 var value;
-
-// loacal object
+// local object
 var selectedValue = {
   index: null,
   section: 1,
   value: 0,
 };
-
 // LOCAL STORAGE
 const getLocalStorage = () => {
   let temp = localStorage.getItem("backup");
@@ -20,30 +19,25 @@ const getLocalStorage = () => {
     value = parseInt(selectedValue.value);
   }
 };
-
 const setLocalStorage = () => {
   localStorage.setItem("backup", JSON.stringify(selectedValue));
 };
-
 // Default main container
 const mainContainer = document.getElementById("main");
 // Section for all
 let commonSection = document.createElement("section");
-
 // create h1
 const createH1 = (text) => {
   let h1 = document.createElement("h1");
   h1.textContent = text;
   return h1;
 };
-
 // create button
-const createButton = (text, id) => {
+const createButton = (content) => {
+  console.log(content);
   let button = document.createElement("button");
-  button.textContent = text;
-  button.id = id;
-  if (id === "next") button.className = id;
-
+  button.textContent = content.button.text;
+  if (content.button.class) button.className = content.button.class;
   commonSection.appendChild(button);
 };
 
@@ -58,20 +52,30 @@ const createElement = (elementType , className , content = ""  ) => {
   return element;
 }
 // clear section
-const clearElement = (element) => {
-  element.replaceChildren();
+const clearElement = () => {
+  mainContainer.replaceChildren();
+  commonSection.replaceChildren();
 };
-
 // section 1
-const sectionOne = (value) => {
+const sectionOne = (content) => {
+  getLocalStorage();
+  switch (selectedValue.section) {
+        case 2:
+          console.log(content);
+          sectionTwo(selectedValue , staticContent.sectionTwo);
+          return;
+        case 3:
+          content = staticContent.sectionThree;
+          sectionThree(selectedValue , staticContent.sectionThree);
+          return;
+      }
   // ELEMENT CREATION-----
-  clearElement(mainContainer);
-  clearElement(commonSection);
+  clearElement();
   // add class
-  commonSection.className = "ChooseShape";
+  console.log(content);
+  commonSection.className = content.class;
   // h1
-  commonSection.appendChild(createH1("1. Choose a Shape"));
-
+  commonSection.appendChild(createH1(content.heading));
   // shapes
   let shapesContainer = document.createElement("div");
   shapesContainer.classList.add("shapes_holder");
@@ -82,9 +86,8 @@ const sectionOne = (value) => {
   }
   commonSection.appendChild(shapesContainer);
   // button
-  createButton("NEXT", "next");
+  createButton(content);
   mainContainer.appendChild(commonSection);
-
   // CALCULATION
   // select shape
   const selectedShape = document.querySelectorAll(".shapes_holder > div");
@@ -95,44 +98,42 @@ const sectionOne = (value) => {
       if(!previousElement){
         previousElement =i;
       }else{
-        console.log(previousElement);
+        
         previousElement.getElementsByTagName("i")[0].classList.remove("tickAppear");
         previousElement = i;
       }
       i.getElementsByTagName("i")[0].classList.add("tickAppear");
-      commonSection.getElementsByTagName("button")[0].style.visibility =
-      "visible";
+      commonSection.getElementsByTagName("button")[0].style.visibility ="visible";
       selectedValue.index = index;
       setLocalStorage();
     });
   });
-
   // button onclick event  (next button)
   const button = document.getElementsByTagName("button")[0];
   button.addEventListener("click", () => {
     // change section value
     selectedValue.section = 2;
     setLocalStorage();
-    sectionTwo(selectedValue);
+    sectionTwo(selectedValue , staticContent.sectionTwo);
   });
 };
 
 // section2
-const sectionTwo = (selectedValue) => {
-  clearElement(mainContainer);
-  clearElement(commonSection);
+const sectionTwo = (selectedValue , content) => {
+  console.log(2);
+  clearElement();
   // add class
-  commonSection.className = "EnterSide";
+  commonSection.className = content.class;
   // h1
-  console.log();
-  commonSection.appendChild(
-    createH1("2. Enter " + shapes[selectedValue.index].heading)
-  );
+  commonSection.appendChild(createH1(content.heading + shapes[selectedValue.index].heading));
   // input
-  const inputelement = createElement("input" , "getInput");
+  const inputelement = createElement(content.input.element , content.input.class);
+ 
   inputelement.type = "number"
+  console.log(inputelement);
   commonSection.appendChild(inputelement);
-  createButton("CALCULATE", "calculate");
+  // console.log(content);
+  createButton(content);
   mainContainer.appendChild(commonSection);
   const button = document.getElementsByTagName("button")[0];
   button.addEventListener("click", () => {
@@ -142,15 +143,14 @@ const sectionTwo = (selectedValue) => {
       selectedValue.section = 3;
       value = selectedValue.value;
       setLocalStorage();
-      sectionThree(selectedValue);
+      sectionThree(selectedValue , staticContent.sectionThree);
     }
   });
 };
 
 // section three
-const sectionThree = (value) => {
-  clearElement(mainContainer);
-  clearElement(commonSection);
+const sectionThree = (value , content) => {
+  clearElement();
   //common section
   commonSection.className = "Result";
   // Result shape
@@ -169,18 +169,17 @@ const sectionThree = (value) => {
     let col1 = document.createElement("div");
     let col2 = document.createElement("div");
     let col3 = document.createElement("div");
-    col1.innerHTML = row["name"];
+    col1.textContent = row["name"];
     rowDiv.appendChild(col1);
-    col2.innerHTML = row.formula;
+    col2.textContent = row.formula;
     rowDiv.appendChild(col2);
-    col3.innerHTML = row.calculate(value.value);
+    col3.textContent = row.calculate(value.value);
     rowDiv.appendChild(col3);
     displayResult.appendChild(rowDiv);
   });
   commonSection.appendChild(resultShape);
-
   // start again button
-  createButton("START AGAIN", "start_again");
+  createButton(content);
   mainContainer.appendChild(commonSection);
   const button = document.getElementsByTagName("button")[0];
   button.addEventListener("click", () => {
@@ -188,21 +187,7 @@ const sectionThree = (value) => {
     selectedValue.value = 0;
     selectedValue.shape = "";
     setLocalStorage();
-    sectionOne(selectedValue);
+    sectionOne(staticContent.sectionOne);
   });
 };
-
-window.addEventListener("load", () => {
-  getLocalStorage();
-  switch (selectedValue.section) {
-    case 1:
-      sectionOne(selectedValue);
-      break;
-    case 2:
-      sectionTwo(selectedValue);
-      break;
-    case 3:
-      sectionThree(selectedValue);
-      break;
-  }
-});
+window.addEventListener("load",sectionOne(staticContent.sectionOne));
