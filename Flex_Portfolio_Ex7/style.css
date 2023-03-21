@@ -328,14 +328,15 @@ i{
     }   
     
     .finalSection{
-        gap: 55px;
+        margin-top: 10px;
+        gap: 48px;
     }
 
     .divider{
         gap: 25px;
     }
     .divider>div:nth-child(1){
-        width: 25px;
+        width: 23px;
     }
     .divider>div:nth-child(2){
         width: 145px;
@@ -346,12 +347,12 @@ i{
     }
     
     .iconContainer>div{
-        height: 60px;
-        width: 60px;
+        height: 58px;
+        width: 58px;
         border:white solid 2px;
     }
     i{
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .finalQuote{
