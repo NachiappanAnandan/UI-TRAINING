@@ -10,7 +10,7 @@ body{
 }
 
 main{
-    height: 110vh;
+    height: 100vh;
     background: url(./images/background-image.png)  no-repeat top;
     position: relative;
 
@@ -24,7 +24,7 @@ img{
 /* Layer opacity for background */
 .layer{
     position: absolute;
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     background-color: black;
     opacity: .3;
@@ -176,6 +176,7 @@ h1 {
 .bottomIcon>i{
     font-size: 35px;
     color: white;
+    cursor: pointer;
 }
 
 
