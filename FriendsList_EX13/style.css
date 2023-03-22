@@ -41,7 +41,7 @@ section{
 
 .card{
     height: 105px;
-    width: 32.5%;
+    width: calc((100% - 32px) / 3);
     background-color: #4d67b4;
     display: flex;
     gap: 20px;
