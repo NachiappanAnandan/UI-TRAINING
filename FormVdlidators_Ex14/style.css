@@ -28,7 +28,7 @@ header{
 main{
     display: flex;
     justify-content: center;
-    min-height: 50vh;
+
 }
 form{
     width: 36.4%;
@@ -37,7 +37,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 38px;
-    box-shadow: 20px  black;
+    box-shadow: .5px .5px 4px rgb(107, 105, 105);
 }
 
 h1{
