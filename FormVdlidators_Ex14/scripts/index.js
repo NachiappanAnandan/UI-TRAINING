@@ -6,8 +6,8 @@ const regex = {
     lastname:/^[[a-zA-Z]{1,30}$/,
     email:/^\w+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/g,
     contact:/^[0-9]{10}$/,
-    pincode:/^[0-9]{6}/,
-    cardNumber:/[0-9]{16}/,
+    pincode:/^[0-9]{6}$/,
+    cardNumber:/[0-9]{16}$/,
     cardExpiry:/^202[3-9]$|^[2-9][0-9][3-9][0-9]$/,
     ccv:/^[0-9]{3,4}$/
 
