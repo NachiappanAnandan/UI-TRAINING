@@ -34,7 +34,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 38px;
-    box-shadow: .5px .5px 4px rgb(107, 105, 105);
+    box-shadow: .2px .2px 5px rgb(215, 211, 211);
 }
 h1{
     font-size: 18px;
