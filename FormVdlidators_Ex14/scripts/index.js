@@ -8,7 +8,7 @@ const regex = {
     contact:/^[0-9]{10}$/,
     pincode:/^[0-9]{6}/,
     cardNumber:/[0-9]{16}/,
-    cardExpiry:/^[2-9][0-9][2-9][3-9]/,
+    cardExpiry:/^202[3-9]$|^[2-9][0-9][3-9][0-9]$/,
     ccv:/^[0-9]{3,4}$/
 
 }
@@ -20,6 +20,8 @@ const complete =() => {
         element.nextElementSibling.textContent =element.name +" is required.";
         element.nextElementSibling.style.display = "block";      
        }else if(!regex[element.id].test(element.value)){ 
+        element.classList.add("colorChange")
+        element.nextElementSibling.style.display = "block";
        element.nextElementSibling.innerHTML =element.name +" is not valid.";
        }else{
          element.classList.remove("colorChange");
