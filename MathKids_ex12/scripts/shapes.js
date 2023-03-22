@@ -83,6 +83,34 @@ const shapes = [
         },
       ],
     },
+    {
+      name: "Circle",
+      class:"circle",
+      heading: "Radius",
+      calculation: [
+        {
+          name: "RADIUS",
+          formula: "r",
+          calculate: function (value) {
+            return value + " cm";
+          },
+        },
+        {
+          name: "AREA",
+          formula: "πr²",
+          calculate: function (value) {
+            return (3.14 * value * value).toFixed(2) + "sq cm";
+          },
+        },
+        {
+          name: "PERIMETER",
+          formula: "2πr",
+          calculate: function (value) {
+            return (2 * 3.14 * value).toFixed(2) + " cm";
+          },
+        }
+      ],
+    },
 
   ];
 

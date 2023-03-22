@@ -61,7 +61,6 @@ const sectionOne = (content) => {
   getLocalStorage();
   switch (selectedValue.section) {
         case 2:
-          console.log(content);
           sectionTwo(selectedValue , staticContent.sectionTwo);
           return;
         case 3:
@@ -72,7 +71,6 @@ const sectionOne = (content) => {
   // ELEMENT CREATION-----
   clearElement();
   // add class
-  console.log(content);
   commonSection.className = content.class;
   // h1
   commonSection.appendChild(createH1(content.heading));
@@ -120,7 +118,6 @@ const sectionOne = (content) => {
 
 // section2
 const sectionTwo = (selectedValue , content) => {
-  console.log(2);
   clearElement();
   // add class
   commonSection.className = content.class;
@@ -128,11 +125,8 @@ const sectionTwo = (selectedValue , content) => {
   commonSection.appendChild(createH1(content.heading + shapes[selectedValue.index].heading));
   // input
   const inputelement = createElement(content.input.element , content.input.class);
- 
   inputelement.type = "number"
-  console.log(inputelement);
   commonSection.appendChild(inputelement);
-  // console.log(content);
   createButton(content);
   mainContainer.appendChild(commonSection);
   const button = document.getElementsByTagName("button")[0];

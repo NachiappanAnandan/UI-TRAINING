@@ -61,7 +61,6 @@ section h1 {
 }
 
 /* shapes styles */
-
 .circle {
     height: 155px;
     width: 155px;
@@ -99,14 +98,12 @@ section h1 {
 .tick {
     color: #fff;
     font-size: 70px;
-    /* font-weight: 300; */
     display: none;
 }
 
 .tickAppear {
     display: block;
 }
-
 
 .triangle>i {
     margin-top: 200px;
@@ -135,7 +132,6 @@ section button {
 .EnterSide {
     gap: 55px;
 }
-
 
 .getInput {
     height: 85px;
@@ -190,13 +186,12 @@ section button {
 
 .detailsContainer>div:nth-child(1) {
     background-color: #0D62D6;
-
     flex-basis: 205px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
-.detailsContainer>div:nth-child(2) {
+.detailsContainer>div {
     background-color: #455D7D;
     width: 50%;
     flex-grow: 1;
@@ -204,6 +199,4 @@ section button {
 
 .detailsContainer>div:nth-child(3) {
     background-color: #3288FF;
-    width: 50%;
-    flex-grow: 1;
 }

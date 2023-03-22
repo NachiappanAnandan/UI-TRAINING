@@ -9,7 +9,7 @@ const staticContent  = {
     } , 
     sectionTwo:{
         class:"EnterSide",
-        heading:"2. Enter",
+        heading:"2. Enter ",
         input:{
             element:"input" , 
             class: "getInput", 
