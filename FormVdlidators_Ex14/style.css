@@ -13,7 +13,6 @@ body{
 }
 /* header */
 header{
-
     height: 125px;
     display: flex;
     justify-content: center;
@@ -23,12 +22,10 @@ header{
     margin-top: -40px;
     width: 260px;
 }
-
 /* form holder */
 main{
     display: flex;
     justify-content: center;
-
 }
 form{
     width: 36.4%;
@@ -39,7 +36,6 @@ form{
     gap: 38px;
     box-shadow: .5px .5px 4px rgb(107, 105, 105);
 }
-
 h1{
     font-size: 18px;
     border: none;
@@ -47,19 +43,14 @@ h1{
     font-weight: 400;
     color :rgb(7, 26, 107)
 }
-
 .container{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 .row{
-    /* background: pink; */
     display: flex;
-    
     gap: 15px;
-    
-    
 }
 .col{
     display: flex;
@@ -68,7 +59,8 @@ h1{
     flex-grow: 1;
 }
 label{
-    font-size: 12px;
+    font-size: 11px;
+    font-weight: 500;
 }
 input{
     height: 45px;
@@ -86,15 +78,13 @@ button{
     border: none;
     padding: 15px;
     cursor: pointer;
+    border-radius: 5px;
 }
-
 .alert{
     font-size: 10px;
     color: brown;
     display: none;
 }
-
 .colorChange{
     border-color: brown;
-   
 }
