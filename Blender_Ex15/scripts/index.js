@@ -20,14 +20,12 @@ const loadPage = (video) => {
     actualComment.className = "actualComment";
     actualComment.textContent = i["comment"];
 
-
-
     let commentInnerDivision = document.createElement("div");
     commentInnerDivision.className = "commentInnerDivision";
     commentInnerDivision.appendChild(actorName);
     commentInnerDivision.appendChild(actualComment);
 
-    git 
+    
     let img = document.createElement("img");
     img.src = i["image"];
     let commentImgHolder = document.createElement("div");
@@ -59,7 +57,6 @@ const loapPoster = (posters) => {
     }
     document.querySelector(".upComingImagesContainer").appendChild(fragments);
 }
-
 
 document.querySelector(".icon").addEventListener("click" , (e) =>{
   let video =   e.target.parentNode.childNodes[1];
