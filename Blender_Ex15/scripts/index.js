@@ -1,13 +1,10 @@
 const loadPage = (video) => {
-
   // fragments
   let fragments  = document.createDocumentFragment();
-
   // video
   var source = document.createElement("source");
   source.src = video["videoUrl"];
   document.getElementsByTagName("video")[0].appendChild(source);
-
   // movie title
   document.getElementsByClassName("movieName")[0].textContent = video["title"];
   // descrption
@@ -30,8 +27,7 @@ const loadPage = (video) => {
     commentInnerDivision.appendChild(actorName);
     commentInnerDivision.appendChild(actualComment);
 
-    
-
+    git 
     let img = document.createElement("img");
     img.src = i["image"];
     let commentImgHolder = document.createElement("div");
@@ -45,10 +41,7 @@ const loadPage = (video) => {
 
     fragments.appendChild(commentCard);
 }
-
   document.querySelector(".comments").appendChild(fragments)
-  // console.log(document.querySelector(".commentsContainer"));
-
 };
 
 const loapPoster = (posters) => {
@@ -60,12 +53,11 @@ const loapPoster = (posters) => {
       img.src = i["imageUrl"];
       img.alt = i["title"];
 
-    //   let div = document.createElement("")
-    //     postersElement+=` <div class="upComingImagesHolder">
-    //     <img src="${}" alt="${}"/>
-    // </div>`
+      let upComingImagesHolder = document.createElement("div");
+      upComingImagesHolder.appendChild(img);
+      fragments.appendChild(upComingImagesHolder);
     }
-    document.getElementsByClassName("upComingImagesContainer")[0].innerHTML = postersElement;
+    document.querySelector(".upComingImagesContainer").appendChild(fragments);
 }
 
 
