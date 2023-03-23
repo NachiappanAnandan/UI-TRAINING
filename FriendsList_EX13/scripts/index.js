@@ -26,7 +26,7 @@ fetch("./scripts/friends.json")
                 email.className = 'email';
                 email.textContent = i["email"];
                 // details
-                let details =document.createElement("div");
+                let details = document.createElement("div");
                 details.className = "details";
                 details.appendChild(name);
                 details.appendChild(email);
