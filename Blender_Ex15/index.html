@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Blender</title>
 </head>
@@ -36,10 +36,15 @@
         <section class="totalContainer">
             <section class="movieContainer">
                 <!-- movie player -->
-
-                <video controls>
-                    
-                </video>
+                <div class="player">
+                    <video controls poster="./images/thumbnail.jpeg">
+                    </video>
+                    <div class="icon">
+                        <i class="fa-regular fa-circle-play "></i>
+                    </div>
+                   
+                </div>
+                
 
 
                 <!-- about movie -->
@@ -53,24 +58,7 @@
                 <section class="commentsContainer">
                     <h1 class="commentHeading">Comments</h1>
                     <div class="comments">
-                        <div class="commentCard">
-                            <div class="commentImgHolder">
-                                <img src="" alt="">
-                            </div>
-                            <div class="commentInnerDivision">
-                                <div class="actorName"></div>
-                                <div class="actualComment"></div>
-                            </div>
-                        </div>
-                        <div class="commentCard">
-                            <div class="commentImgHolder">
-
-                            </div>
-                            <div class="commentInnerDivision">
-                                <div class="actorName"></div>
-                                <div class="actualComment"></div>
-                            </div>
-                        </div>
+                        
                     </div>
 
                 </section>

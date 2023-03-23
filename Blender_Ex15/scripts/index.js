@@ -1,4 +1,8 @@
 const loadPage = (video) => {
+
+  // fragments
+  let fragments  = document.createDocumentFragment();
+
   // video
   var source = document.createElement("source");
   source.src = video["videoUrl"];
@@ -9,32 +13,73 @@ const loadPage = (video) => {
   // descrption
   document.getElementsByClassName("movieDescrp")[0].textContent = video["description"];
 
-  let comments = "";
   for (let i of video["comments"]) {
-    comments += `<div class="commentCard">
-                            <div class="commentImgHolder">
-                            <img src="./${i["image"]}" alt="">
-                            </div>
-                            <div class="commentInnerDivision">
-                                <div class="actorName">${i["name"]}</div>
-                                <div class="actualComment">${i["comment"]}</div>
-                            </div>
-                        </div>`;
-  }
-  document.getElementsByClassName("comments")[0].innerHTML = comments;
+
+    let actorName = document.createElement("div");
+    actorName.className = "actorName";
+    actorName.textContent = i["name"];
+
+    let actualComment = document.createElement("div");
+    actualComment.className = "actualComment";
+    actualComment.textContent = i["comment"];
+
+
+
+    let commentInnerDivision = document.createElement("div");
+    commentInnerDivision.className = "commentInnerDivision";
+    commentInnerDivision.appendChild(actorName);
+    commentInnerDivision.appendChild(actualComment);
+
+    
+
+    let img = document.createElement("img");
+    img.src = i["image"];
+    let commentImgHolder = document.createElement("div");
+    commentImgHolder.className ="commentImgHolder";
+    commentImgHolder.appendChild(img)
+
+    let commentCard = document.createElement("div");
+    commentCard.className = "commentCard";
+    commentCard.appendChild(commentImgHolder);
+    commentCard.appendChild(commentInnerDivision);
+
+    fragments.appendChild(commentCard);
+}
+
+  document.querySelector(".comments").appendChild(fragments)
+  // console.log(document.querySelector(".commentsContainer"));
+
 };
 
 const loapPoster = (posters) => {
    
-    let postersElement="";
+    let fragments=document.createDocumentFragment();
     for(let i of posters){
-        postersElement+=` <div class="upComingImagesHolder">
-        <img src="${i["imageUrl"]}" alt="${i["title"]}"/>
-    </div>`
+
+      let img = document.createElement("img");
+      img.src = i["imageUrl"];
+      img.alt = i["title"];
+
+    //   let div = document.createElement("")
+    //     postersElement+=` <div class="upComingImagesHolder">
+    //     <img src="${}" alt="${}"/>
+    // </div>`
     }
     document.getElementsByClassName("upComingImagesContainer")[0].innerHTML = postersElement;
 }
 
+
+document.querySelector(".icon").addEventListener("click" , (e) =>{
+  let video =   e.target.parentNode.childNodes[1];
+  if(video.paused){
+    e.target.querySelector("i").style.display = "none"
+    video.play();
+  }else{
+    video.pause();
+    e.target.querySelector("i").style.display = "block"
+   
+  }
+})
 // // fetch
 fetch("./scripts/video.json")
   .then((response) => response.json())
