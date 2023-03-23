@@ -195,8 +195,8 @@ footer{
 .mobile{
     display: none;
 }
-hr{
-    color: gray;
+.line{
+    border-bottom: 1px solid #DDDDDD;
 }
 .iconChat{
     position: fixed;

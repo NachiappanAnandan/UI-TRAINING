@@ -66,7 +66,18 @@ document.querySelector(".icon").addEventListener("click" , (e) =>{
   }else{
     video.pause();
     e.target.querySelector("i").style.display = "block"
-   
+  }
+})
+
+
+document.querySelector("i").addEventListener("click" , (e) => {
+  let video =   e.target.parentNode.parentNode.childNodes[1];
+  if(video.paused){
+    e.target.style.display = "none"
+    video.play();
+  }else{
+    video.pause();
+    e.target.style.display = "block"
   }
 })
 // // fetch
