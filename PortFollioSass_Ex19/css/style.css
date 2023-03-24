@@ -1,0 +1,320 @@
+* {
+  margin: 0%;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  row-gap: 160px;
+  font-family: "Roboto", sans-serif;
+}
+
+.introSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 130px;
+  width: 79.2%;
+}
+.introSection .email {
+  display: flex;
+  height: 100px;
+  flex-direction: row-reverse;
+  align-items: end;
+  color: white;
+}
+.introSection .email h2 {
+  font-weight: 600;
+  font-size: 25px;
+  font-stretch: 30%;
+}
+.introSection .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.introSection .intro .name {
+  display: flex;
+  align-content: start;
+  font-size: 170px;
+  color: white;
+  margin-right: 5px;
+  padding-bottom: 12px;
+}
+.introSection .intro .name div {
+  letter-spacing: -8px;
+  font-stretch: -20%;
+  white-space: nowrap;
+}
+.introSection .intro .name .light {
+  font-weight: 300;
+  letter-spacing: -10px;
+  margin-right: 30px;
+}
+.introSection .intro .bold {
+  font-weight: 500;
+}
+.introSection .role {
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(204, 204, 204);
+  letter-spacing: 1px;
+}
+.introSection .role span {
+  color: rgb(92, 142, 220);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* column-gap: 36px; */
+  row-gap: 31px;
+  width: 79.2%;
+}
+main figure {
+  width: 31.65%;
+}
+
+.thirdSection {
+  display: flex;
+  flex-direction: column;
+  gap: 280px;
+}
+.thirdSection .logoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 95px;
+}
+.thirdSection .logoSection h1 {
+  color: rgb(204, 204, 204);
+  text-align: center;
+  font-size: 47px;
+  font-weight: 600;
+}
+.thirdSection .logoSection h1 span {
+  color: rgb(195, 232, 145);
+}
+.thirdSection .logoSection div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  width: 95%;
+}
+.thirdSection .logoSection div figure {
+  width: 11%;
+  flex-grow: 0;
+}
+
+.spotify, .ikea {
+  flex-basis: 145px;
+}
+
+.audi {
+  flex-basis: 120px;
+}
+
+.addidas {
+  flex-basis: 90px;
+  flex-shrink: 0;
+}
+
+.lufthansa {
+  flex-basis: 160px;
+}
+
+.mont_blanc {
+  flex-basis: 117px;
+}
+
+.finalSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 115px;
+}
+.finalSection .divider {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+.finalSection .divider div:nth-child(1) {
+  border: 0.5px solid white;
+  width: 35px;
+}
+.finalSection .divider div:nth-child(2) {
+  border: 0.5px solid white;
+  width: 225px;
+}
+.finalSection .iconSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+.finalSection .iconSection .iconContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.finalSection .iconSection .iconContainer div {
+  height: 55px;
+  width: 55px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  cursor: pointer;
+}
+.finalSection .iconSection .iconContainer div i {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+.finalSection .finalQuote {
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+/* styles for mobile view */
+@media screen and (max-width: 768px) {
+  body {
+    justify-content: center;
+    align-items: center;
+    row-gap: 120px;
+  }
+  .introSection {
+    margin-top: 255px;
+    flex-direction: column-reverse;
+    gap: 25px;
+    row-gap: 5px;
+  }
+  .introSection .email {
+    height: auto;
+    justify-content: center;
+    font-size: 10px;
+  }
+  .introSection .email h2 {
+    font-size: 20px;
+  }
+  .introSection .intro {
+    gap: 20px;
+  }
+  .introSection .intro .name {
+    font-size: 55px;
+  }
+  .introSection .intro .name .light {
+    letter-spacing: 0px;
+  }
+  .introSection .intro .name .bold {
+    letter-spacing: 0px;
+  }
+  .introSection .intro .role {
+    font-size: 35px;
+  }
+  main {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+  }
+  main figure {
+    width: 100%;
+    justify-content: center;
+  }
+  .thirdSection {
+    margin-top: -35px;
+    gap: 190px;
+  }
+  .thirdSection .logoSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+  }
+  .thirdSection .logoSection h1 {
+    font-size: 35px;
+  }
+  .thirdSection .logoSection div {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 100px;
+  }
+  .spotify {
+    flex-basis: 115px;
+  }
+  .audi, .mont_blanc {
+    flex-basis: 100px;
+  }
+  .addidas {
+    flex-basis: 70px;
+    flex-shrink: 0;
+    margin-left: 20px;
+  }
+  .lufthansa {
+    flex-basis: 132px;
+  }
+  .ikea {
+    flex-basis: 120px;
+  }
+  .finalSection {
+    margin-top: 10px;
+    gap: 48px;
+  }
+  .finalSection .divider {
+    gap: 25px;
+  }
+  .finalSection .divider .divider > div:nth-child(1) {
+    width: 23px;
+  }
+  .finalSection .divider .divider > div:nth-child(2) {
+    width: 145px;
+  }
+  .finalSection .iconContainer {
+    width: 100%;
+  }
+  .finalSection .iconContainer div {
+    height: 58px;
+    width: 58px;
+    border: white solid 2px;
+  }
+  .finalSection .iconContainer div i {
+    font-size: 35px;
+  }
+  .finalSection .finalQuote {
+    margin-top: -20px;
+    margin-bottom: 60px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
