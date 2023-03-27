@@ -11,7 +11,7 @@ $( function() {
 
 
 
-fetch("../scripts/locations.json")
+fetch("./scripts/locations.json")
     .then(response => response.json())
         .then(data => tableAdd(data))
 
@@ -27,7 +27,7 @@ const tableAdd = (data) => {
                 let imgHolder = document.createElement("div")
                 imgHolder.className = "flagHolder"
                 let img = document.createElement("img");
-                img.src = "../images/"+element[i]+".png";
+                img.src = "./images/"+element[i]+".png";
                 imgHolder.append(img);
                 cell.appendChild(imgHolder);
             }else{
