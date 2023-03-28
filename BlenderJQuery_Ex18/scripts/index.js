@@ -1,23 +1,23 @@
 $(document).ready(function(){
   const loadPage = (video) => {
 
-    let source = $("<source/>").attr({"src": video['videoUrl'] , });
+    const source = $("<source/>").attr({"src": video['videoUrl'] , });
     $("video").append(source);
     // movie title
     $(".movieName").text(video["title"]);
    // descrption
    $(".movieDescrp").text(video["description"])
     video["comments"].forEach(element => {
-      let actorName = $("<div/>").addClass("actorName").text(element["name"]);
-      let actualComment = $("<div/>").addClass("actualComment").text(element["comment"]);
-      let commentInnerDivision = $("<div/>").addClass("commentInnerDivision").append(actorName , actualComment);
+      const actorName = $("<div/>").addClass("actorName").text(element["name"]);
+      const actualComment = $("<div/>").addClass("actualComment").text(element["comment"]);
+      const commentInnerDivision = $("<div/>").addClass("commentInnerDivision").append(actorName , actualComment);
       // commentInnerDivision;
 
-      let img = $("<img/>").attr({"src":element["image"]});
-      let commentImgHolder = $("<div/>").addClass("commentImgHolder").append(img);
+      const img = $("<img/>").attr({"src":element["image"]});
+      const commentImgHolder = $("<div/>").addClass("commentImgHolder").append(img);
 
 
-      let commentCard = $("<div/>").addClass("commentCard").append(commentImgHolder , commentInnerDivision);
+      const commentCard = $("<article/>").addClass("commentCard").append(commentImgHolder , commentInnerDivision);
       $(".comments").append(commentCard);
 
     });
@@ -25,11 +25,11 @@ $(document).ready(function(){
   }
 
 
-  const loapPoster = (posters) => {
+  const loadPoster = (posters) => {
     console.log(posters);
     posters.forEach(element => {
-      let img = $("<img/>").attr({"src":element["imageUrl"]});
-      let actualComment = $("<div/>").append(img);
+      const img = $("<img/>").attr({"src":element["imageUrl"]});
+      const actualComment = $("<article/>").append(img);
       $(".upComingImagesContainer").append(actualComment);
 
     });
@@ -56,10 +56,7 @@ $(".icon").click(()=>{
 
   $.ajax({url: "https://mocki.io/v1/8c9b378b-d248-4203-93b0-b8e7659ac346", success: function(result){
     console.log(result);
-    loapPoster (result);
+    loadPoster (result);
   }});
-
-
-
 
 });
