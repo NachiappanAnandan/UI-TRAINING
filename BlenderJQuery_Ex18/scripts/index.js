@@ -39,7 +39,7 @@ $(document).ready(function(){
 // onclick
 
 $(".icon").click(()=>{
-  let video = $("video");
+  const video = $("video");
   if(video[0].paused){
     video.trigger("play")
     $("i").css('display', 'none'); 
