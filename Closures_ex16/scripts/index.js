@@ -1,5 +1,5 @@
 function CDM(){
-    var accounts = [
+    const accounts = [
         {
             accountNo:"001",
             cardNumber:"9001",
@@ -29,14 +29,14 @@ function CDM(){
 
     
     const deposit= (index) => {
-        let cardNo = window.prompt("Enter the CardNo");
-        if(cardNo == accounts[index].cardNumber){
-            let pin = window.prompt("Enter the pin");
-            if(pin == accounts[index].pin){
-                let ammount = parseInt(window.prompt("Enter the amount to deposit"));
+        const cardNo = window.prompt("Enter the CardNo");
+        if(cardNo === accounts[index].cardNumber){
+            const pin = window.prompt("Enter the pin");
+            if(pin === accounts[index].pin){
+                const amount = parseInt(window.prompt("Enter the amount to deposit"));
                 
-                    accounts[index].balance+= ammount;
-                    window.alert(ammount + " deposited\n Balance : "+accounts[index].balance);
+                    accounts[index].balance += amount;
+                    window.alert(`${amount} deposited\n Balance : ${accounts[index].balance}`);
                 }else{
                     window.alert("Invalid Pin.");
             }
@@ -46,14 +46,14 @@ function CDM(){
     }
     const Withdraw= (index) => {
         
-       let cardNo = window.prompt("Enter the CardNo");
-        if(cardNo == accounts[index].cardNumber){
-            let pin = window.prompt("Enter the pin");
-            if(pin == accounts[index].pin){
-                let ammount = parseInt(window.prompt("Enter the amount to be withdrawn."));
-                if(ammount<=accounts[index].balance){
-                    accounts[index].balance-= ammount;
-                    window.alert(ammount + " Withdrawn\n Balance : "+accounts[index].balance);
+       const cardNo = window.prompt("Enter the CardNo");
+        if(cardNo === accounts[index].cardNumber){
+            const pin = window.prompt("Enter the pin");
+            if(pin === accounts[index].pin){
+                const amount = parseInt(window.prompt("Enter the amount to be withdrawn."));
+                if(amount <= accounts[index].balance){
+                    accounts[index].balance-= amount;
+                    window.alert(`${amount} Withdrawn\n Balance : ${accounts[index].balance}`);
                 }else{
                     window.alert("Insufficient Balance!!");
                 }
@@ -69,11 +69,11 @@ function CDM(){
     const executeCDM = () => {
 
         let flag1 = false;
-        var user = 0;
+        let user = 0;
         while(!flag1){
-            var getAccountNo = window.prompt("Enter the Account Number to Login:");
+            const getAccountNo = window.prompt("Enter the Account Number to Login:");
         accounts.forEach((i , index) => {
-            if( i.accountNo == getAccountNo){
+            if( i.accountNo === getAccountNo){
                 flag1 = true;
                 user =  index;
                 return;
@@ -83,18 +83,10 @@ function CDM(){
         }
 
         while(true){
-            var userSelection = window.prompt("Enter the Operation: \n1.Withdraw\n2.Deposit\n3.Exit");
-            switch (userSelection) {
-                case "1":
-                    Withdraw(user);
-                    break;
-                case "2":
-                    deposit(user);   
-                    break;    
-            }
-            if(userSelection == "3"){
-                break;
-            }
+            const userSelection = window.prompt("Enter the Operation: \n1.Withdraw\n2.Deposit\n3.Exit");
+            if(userSelection === "1")Withdraw(user);
+            else if(userSelection === "2")  deposit(user);  
+            else break;
         }
         
     }
