@@ -39,8 +39,6 @@ const createRow = (data) => {
 const tableAdd = (data) => {
     const fragments = document.createDocumentFragment();
     data.forEach(element => {
-        // console.log(element);
-        console.log();
         fragments.appendChild(createRow(element));
     });
     document.getElementById("table").append(fragments);
