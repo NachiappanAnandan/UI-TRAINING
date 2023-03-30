@@ -1,0 +1,202 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+header {
+    height: 72px;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    background: #A9E087;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+main {
+    height: calc(100vh);
+    display: flex;
+    justify-content: center;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ChooseShape {
+    gap: 95px;
+    margin-top: 75px;
+}
+
+
+section h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+.shapes_holder {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* shapes styles */
+.circle {
+    height: 155px;
+    width: 155px;
+    background-color: #00987C;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.triangle {
+    width: 0px;
+    height: 0px;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 160px solid #FFABDC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.square {
+    height: 155px;
+    width: 155px;
+    background: #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.tick {
+    color: #fff;
+    font-size: 70px;
+    display: none;
+}
+
+.tickAppear {
+    display: block;
+}
+
+.triangle>i {
+    margin-top: 200px;
+}
+
+section button {
+    display: inline-block;
+    width: 220px;
+    height: 55px;
+    background: transparent;
+    color: #fff;
+    border: white solid 2px;
+    border-radius: 5px;
+    font-size: 23px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.next {
+    visibility: hidden;
+}
+
+/* section 2 */
+.EnterSide {
+    gap: 55px;
+}
+
+.getInput {
+    height: 85px;
+    width: 710px;
+    background: #000;
+    border: #fff 2px solid;
+    padding: 0 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Result section */
+
+.Result {
+    gap: 80px;
+}
+
+.ResultShape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    gap: 25px;
+}
+
+.displayResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+}
+
+.detailsContainer {
+    width: 467px;
+    height: 45px;
+    background: #fff;
+    display: flex;
+
+}
+
+.detailsContainer>div {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 19px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.detailsContainer>div:nth-child(1) {
+    background-color: #0D62D6;
+    flex-basis: 205px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.detailsContainer>div {
+    background-color: #455D7D;
+    width: 50%;
+    flex-grow: 1;
+}
+
+.detailsContainer>div:nth-child(3) {
+    background-color: #3288FF;
+}
