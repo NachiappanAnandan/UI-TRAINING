@@ -39,11 +39,11 @@ header{
     align-items: center;
     gap: 5px;
 }
-.profileName{
+.profile-name{
     font-size: 10px;
     font-weight: 200;
 }
-.profileImgHolder{
+.profile-img-holder{
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -58,14 +58,14 @@ main{
     justify-content: center;
 }
 
-.totalContainer{
+.total-container{
     width: 1300px;
     display: flex;
     justify-content: space-between;
 }
 
 /* movie container */
-.movieContainer{
+.movie-container{
     width: 74.6%;
     display: flex;
     flex-direction: column;
@@ -92,16 +92,16 @@ width: 100%;
     cursor: pointer;
 }
 
-.aboutMovie{
+.about-movie{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.movieName{
+.movie-name{
     font-size: 25px;
     font-weight: 400;
 }
-.movieDescrp{
+.movie-descrp{
     font-size: 14px;
     font-weight: 300;
     line-height: 1.5rem;
@@ -109,7 +109,7 @@ width: 100%;
 
 /* comments section */
 
-.commentsContainer{
+.comments-container{
     margin-top: 5px;
 }
 .commentHeading{
@@ -157,7 +157,7 @@ width: 100%;
 
 /* upcoming section */
 
-.upComingProjects{
+.upcoming-projects{
     width: 23%;
     padding: 2px 0;
     display: flex;
@@ -166,7 +166,7 @@ width: 100%;
 }
 
 
-.upComingImagesContainer{
+.upComing-images-container{
 display: flex;
 flex-direction: column;
 gap: 10px;
@@ -189,7 +189,7 @@ footer{
     color: white;
 }
 
-.footerText{
+.footer-text{
     font-size: 16px;
 }
 .mobile{
@@ -198,7 +198,7 @@ footer{
 .line{
     border-bottom: 1px solid #DDDDDD;
 }
-.iconChat{
+.icon-chat{
     position: fixed;
     bottom: 40px;
     right: 70px;
@@ -212,7 +212,7 @@ footer{
 }
 
 
-.iconChat>i{
+.icon-chat>i{
     font-size: 24px;
     color: #fff;
 }
@@ -221,27 +221,27 @@ footer{
     header{
         padding: 0 20px;
     }
-    .profileName{
+    .profile-name{
         display: none;
     }
-    .totalContainer{
+    .total-container{
         flex-direction: column;
         width: 90%;
         gap: 20px;
     }
-    .movieContainer{
+    .movie-container{
         width: 100%;
     }
-    .movieName{
+    .movie-name{
         font-size: 14px;
     }
-    .movieDescrp{
+    .movie-descrp{
         font-size: 12px;
     }
     .commentHeading{
         font-size: 16px;
     }
-    .upComingProjects{
+    .upcoming-projects{
         width: 100%;
     }
     .mobile{
@@ -259,7 +259,7 @@ footer{
         font-size: 24px;
         font-weight: 500;
     }
-    .iconChat{
+    .icon-chat{
         right: 20px;
     }
 }

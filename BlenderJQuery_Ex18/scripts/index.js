@@ -26,7 +26,6 @@ $(document).ready(function(){
 
 
   const loadPoster = (posters) => {
-    console.log(posters);
     posters.forEach(element => {
       const img = $("<img/>").attr({"src":element["imageUrl"]});
       const actualComment = $("<article/>").append(img);
@@ -50,7 +49,6 @@ $(".icon").click(()=>{
 })
 
   $.ajax({url: "https://mocki.io/v1/4da47fc5-bbf3-4e41-b35f-c88a584bc4b0", success: function(result){
-    console.log(result);
     loadPage (result);
   },
   error: function (error) {
@@ -59,7 +57,6 @@ $(".icon").click(()=>{
 });
 
   $.ajax({url: "https://mocki.io/v1/8c9b378b-d248-4203-93b0-b8e7659ac346", success: function(result){
-    console.log(result);
     loadPoster (result);
   },
   error: function (error) {
