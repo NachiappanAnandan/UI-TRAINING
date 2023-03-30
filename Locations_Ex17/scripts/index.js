@@ -1,15 +1,11 @@
 $( function() {
     $( "#tabs" ).tabs();
-} );
-
-$( function() {
     $( "#accordion" ).accordion({
-      collapsible: true,
-      heightStyle: "content"
-    });
- } );
-
-
+        collapsible: true,
+        heightStyle: "content"
+      });
+},
+);
 
 fetch("./scripts/locations.json")
     .then(response => response.json())
