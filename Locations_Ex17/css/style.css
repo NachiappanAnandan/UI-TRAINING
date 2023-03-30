@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+/* header */
+header{
+    display: flex;
+    justify-content: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: -2%;
+}
+section{
+    width:37%;
+}
+.imgHolder{
+    margin-top: -40px;
+    width: 275px;
+}
+/* table  */
+#table{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+tr{
+    background: red;
+    border: none;
+    font-size: 12px;
+    height: 35px;
+}
+tr td:nth-child(4){
+    text-align: right;
+}
+td{
+    padding: 0 10px;
+}
+.flagHolder > img{
+    height: 100%;
+}
+.flagHolder{
+    height: 25px;
+    width: 25px;
+    background: #000;
+    border-radius: 50%;
+    overflow: hidden;
+}
+tr:nth-of-type(odd){
+    background: #eee;
+}
+tr:nth-of-type(even){
+    background: #F2D9F7;
+}
+/* css overriding */
+#tab{
+    background-color: transparent;
+    border: 0;
+    padding-left: 25px;
+    font-size: 12px;
+}
+#tabs ul li{
+    padding: 3px 15px;
+    border-radius: 5px 5px 0 0;
+}
+.ui-tabs .ui-tabs-panel{
+    box-shadow: 1px 1px 8px rgb(198, 194, 194);
+    height: 550px;
+    padding: 20px;
+}
+.ui-tabs .ui-tabs-nav li{
+     margin-right: 10px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #000;
+   
+}
+.ui-state-default a, .ui-state-default a:link{
+    color: #fff;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
+border: none;
+background-color: #001B71;
+}
+#tabs-1>p{
+    margin-top: 10px;
+}
+
+#accordion > h3{
+    background: #818EB9;
+    color: #FFF;
+}
+#tabs-3{
+    overflow: auto;
+}
+#tabs-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#tabs{
+    border: none;
+    padding-top: 20px;
+    font-size: 13px;
+    line-height: 1.2rem;
+}
