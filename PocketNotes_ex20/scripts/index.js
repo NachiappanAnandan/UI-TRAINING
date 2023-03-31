@@ -160,47 +160,54 @@ const clearMain = () => {
 
 // showing notes in 1st page
 const showNotes = () => {
-   
+    console.log(NotesData.length);
     let buttonFragment = document.createDocumentFragment();
-    let deleteAll = createElement("button","delete" , {"textContent":"DELETE ALL"});
-    let newbutton = createElement("button","new" , {"textContent":"NEW"});
-    buttonFragment.append(deleteAll , newbutton);
-    document.querySelector(".buttons-holder").replaceChildren(buttonFragment);
-    document.querySelector(".arrow").style.display = "none";
+        let deleteAll = createElement("button","delete" , {"textContent":"DELETE ALL"});
+        let newbutton = createElement("button","new" , {"textContent":"NEW"});
+        buttonFragment.append(deleteAll , newbutton);
+        document.querySelector(".buttons-holder").replaceChildren(buttonFragment);
 
-    if(NotesData.length == 0){
-
-    }
-   
-   
-        let count =0;
-        clearMain();
-        let section = createElement("section" ,"cards-holder" , {});
-        let fragment = document.createDocumentFragment();
-        for (; count < NotesData.length & count<maxCount; count++) {
-            fragment.appendChild(createSingleCard(NotesData[count]));
-
+    // if(NotesData.length ==0){
+    //     document.getElementsByClassName(".cube-holder")[0].style.display = "block";
+    // }else{
+        document.querySelector(".arrow").style.display = "none";
+    
+        if(NotesData.length == 0){
+    
         }
        
-        // elements of card
-        section.appendChild(fragment);
-        const loadMore = createElement("button" , "load-more" , {"textContent":"Load More"});
        
-        insertMain(section);
-        if(count>=maxCount){
-            insertMain(loadMore)
-            document.querySelector(".load-more").addEventListener("click" , () => {
-                maxCount+=10;
-                for(let i=0;i<maxCount;i++){
-                   showNotes();
-                }
-                
-            })
-        }
-        document.querySelectorAll(".card-cover").forEach(card => card.addEventListener("click" , (e) => { 
-            let index = (NotesData.length-1) - parseInt( e.target.parentNode.getAttribute("data-id")) ;
-        showNotesContent(index);
-        }))
+            let count =0;
+            clearMain();
+            let section = createElement("section" ,"cards-holder" , {});
+            let fragment = document.createDocumentFragment();
+            for (; count < NotesData.length & count<maxCount; count++) {
+                fragment.appendChild(createSingleCard(NotesData[count]));
+    
+            }
+           
+            // elements of card
+            section.appendChild(fragment);
+            const loadMore = createElement("button" , "load-more" , {"textContent":"Load More"});
+           
+            insertMain(section);
+            if(count>=maxCount){
+                insertMain(loadMore)
+                document.querySelector(".load-more").addEventListener("click" , () => {
+                    maxCount+=10;
+                    for(let i=0;i<maxCount;i++){
+                       showNotes();
+                    }
+                    
+                })
+            }
+            document.querySelectorAll(".card-cover").forEach(card => card.addEventListener("click" , (e) => { 
+                let index = (NotesData.length-1) - parseInt( e.target.parentNode.getAttribute("data-id")) ;
+            showNotesContent(index);
+            }))
+    // }
+   
+   
      
    
    
@@ -312,7 +319,6 @@ const displayNotesForm = () => {
        if(localNote.color == colors[iterator]){
         alreadySelectedElement = div;
        }
-
         colorHolder.appendChild(div);
     }
     let add = createElement("button" , "add-card ",{"textContent":"ADD" , "type": "button"});
@@ -343,7 +349,8 @@ const displayNotesForm = () => {
     //    close listner
    document.querySelector(".close-box-button").addEventListener("click" , () => {
     container.remove()
-    empytyLocalData();
+    if(localNote.edit) empytyLocalData();
+   
     
    })
 
@@ -366,10 +373,10 @@ const displayNotesForm = () => {
         container.remove();
 
         showNotes();
-       
+        empytyLocalData();
         
        }
-       empytyLocalData();
+       
    })
 
     
@@ -402,8 +409,9 @@ const displayDeleteConfirm = (data) => {
         }else{
             NotesData = []
             setLocalStorage(NotesData);
+            accessLocalStorage();
             container.remove();
-            showNotes(NotesData);
+            showNotes();
         }
             
     })

@@ -31,6 +31,7 @@ header{
 .arrow{
     font-size: 16px;
     color: #fff;
+    cursor: pointer;
 }
 h1{
     display: inline-block;
@@ -67,7 +68,7 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 45px 0;
     background: #000;
     
@@ -97,7 +98,7 @@ h1{
     gap: 20px;
 }
 .cube{
-    font-size:300px;
+    font-size:200px;
 }
 .empty-remainder{
     font-size: 30px;
@@ -256,7 +257,7 @@ h1{
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 .form-top{
     display: flex;
