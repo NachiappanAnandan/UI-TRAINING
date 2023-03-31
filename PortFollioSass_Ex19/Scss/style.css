@@ -226,13 +226,14 @@ main figure {
     font-size: 20px;
   }
   .introSection .intro {
-    gap: 20px;
+    gap: 10px;
   }
   .introSection .intro .name {
     font-size: 55px;
   }
   .introSection .intro .name .light {
     letter-spacing: 0px;
+    margin-right: 10px;
   }
   .introSection .intro .name .bold {
     letter-spacing: 0px;
@@ -267,7 +268,8 @@ main figure {
   .thirdSection .logoSection div {
     justify-content: space-evenly;
     flex-wrap: wrap;
-    column-gap: 100px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
     row-gap: 100px;
   }
   .spotify {
@@ -294,10 +296,12 @@ main figure {
   .finalSection .divider {
     gap: 25px;
   }
-  .finalSection .divider .divider > div:nth-child(1) {
+  .finalSection .divider div:nth-child(1) {
+    flex-grow: 0;
     width: 23px;
   }
-  .finalSection .divider .divider > div:nth-child(2) {
+  .finalSection .divider div:nth-child(2) {
+    flex-grow: 0;
     width: 145px;
   }
   .finalSection .iconContainer {
@@ -315,6 +319,4 @@ main figure {
     margin-top: -20px;
     margin-bottom: 60px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
