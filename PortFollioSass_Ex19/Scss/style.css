@@ -16,7 +16,7 @@ body {
   gap: 0;
   flex-wrap: wrap;
   row-gap: 160px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .introSection {
