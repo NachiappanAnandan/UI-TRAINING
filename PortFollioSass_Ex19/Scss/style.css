@@ -1,6 +1,7 @@
 * {
   margin: 0%;
   padding: 0;
+  box-sizing: border-box;
 }
 
 img {
@@ -18,33 +19,32 @@ body {
   row-gap: 160px;
   font-family: "Roboto Condensed", sans-serif;
 }
-
-.intro-section {
+body .intro-section {
   display: flex;
   flex-direction: column;
   row-gap: 130px;
   width: 79.2%;
 }
-.intro-section .email {
+body .intro-section .email {
   display: flex;
   height: 100px;
   flex-direction: row-reverse;
   align-items: end;
   color: white;
 }
-.intro-section .email h2 {
+body .intro-section .email h2 {
   font-weight: 600;
   font-size: 25px;
   font-stretch: 30%;
 }
-.intro-section .intro {
+body .intro-section .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0;
 }
-.intro-section .intro .name {
+body .intro-section .intro .name {
   display: flex;
   align-content: start;
   font-size: 170px;
@@ -52,30 +52,29 @@ body {
   margin-right: 5px;
   padding-bottom: 12px;
 }
-.intro-section .intro .name div {
+body .intro-section .intro .name div {
   letter-spacing: -8px;
   font-stretch: -20%;
   white-space: nowrap;
 }
-.intro-section .intro .light {
+body .intro-section .intro .light {
   font-weight: 300;
   letter-spacing: -30px;
   margin-right: 30px;
 }
-.intro-section .intro .bold {
+body .intro-section .intro .bold {
   font-weight: 500;
 }
-.intro-section .role {
+body .intro-section .role {
   font-size: 50px;
   font-weight: 600;
   color: rgb(204, 204, 204);
   letter-spacing: 1px;
 }
-.intro-section .role span {
+body .intro-section .role span {
   color: rgb(92, 142, 220);
 }
-
-main {
+body main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -83,32 +82,31 @@ main {
   row-gap: 31px;
   width: 79.2%;
 }
-main figure {
+body main figure {
   width: 31.65%;
 }
-
-.third-section {
+body .third-section {
   display: flex;
   flex-direction: column;
   gap: 280px;
 }
-.third-section .logo-section {
+body .third-section .logo-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 95px;
 }
-.third-section .logo-section h1 {
+body .third-section .logo-section h1 {
   color: rgb(204, 204, 204);
   text-align: center;
   font-size: 47px;
   font-weight: 600;
 }
-.third-section .logo-section h1 span {
+body .third-section .logo-section h1 span {
   color: rgb(195, 232, 145);
 }
-.third-section .logo-section div {
+body .third-section .logo-section div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -116,60 +114,54 @@ main figure {
   gap: 0px;
   width: 95%;
 }
-.third-section .logo-section div figure {
+body .third-section .logo-section div figure {
   width: 11%;
   flex-grow: 0;
 }
-
-.spotify, .ikea {
+body .third-section .logo-section div .spotify, body .third-section .logo-section div .ikea {
   flex-basis: 145px;
 }
-
-.audi {
+body .third-section .logo-section div .audi {
   flex-basis: 120px;
 }
-
-.addidas {
+body .third-section .logo-section div .addidas {
   flex-basis: 90px;
   flex-shrink: 0;
 }
-
-.lufthansa {
+body .third-section .logo-section div .lufthansa {
   flex-basis: 160px;
 }
-
-.mont_blanc {
+body .third-section .logo-section div .mont_blanc {
   flex-basis: 117px;
 }
-
-.final-section {
+body .final-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 115px;
 }
-.final-section .divider {
+body .final-section .divider {
   display: flex;
   justify-content: center;
   gap: 35px;
 }
-.final-section .divider div:nth-child(1) {
-  border: 0.5px solid white;
+body .final-section .divider div:nth-child(1) {
+  border: 1px solid white;
   width: 35px;
 }
-.final-section .divider div:nth-child(2) {
-  border: 0.5px solid white;
+body .final-section .divider div:nth-child(2) {
+  border: 1px solid white;
   width: 225px;
 }
-.final-section .icon-section {
+body .final-section .icon-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 90px;
 }
-.final-section .icon-section .iconContainer {
+body .final-section .icon-section .icon-container {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -179,7 +171,7 @@ main figure {
   align-items: center;
   gap: 20px;
 }
-.final-section .icon-section .iconContainer div {
+body .final-section .icon-section .icon-container div {
   height: 55px;
   width: 55px;
   border: 1px solid white;
@@ -191,12 +183,12 @@ main figure {
   gap: 0px;
   cursor: pointer;
 }
-.final-section .icon-section .iconContainer div i {
+body .final-section .icon-section .icon-container div i {
   color: white;
   font-size: 30px;
   cursor: pointer;
 }
-.final-section .final-quote {
+body .final-section .final-quote {
   font-size: 25px;
   font-weight: 500;
   color: white;
@@ -211,112 +203,112 @@ main figure {
     align-items: center;
     row-gap: 120px;
   }
-  .intro-section {
+  body .intro-section {
     margin-top: 255px;
     flex-direction: column-reverse;
     gap: 25px;
     row-gap: 5px;
   }
-  .intro-section .email {
+  body .intro-section .email {
     height: auto;
     justify-content: center;
     font-size: 10px;
   }
-  .intro-section .email h2 {
+  body .intro-section .email h2 {
     font-size: 20px;
   }
-  .intro-section .intro {
+  body .intro-section .intro {
     gap: 10px;
   }
-  .intro-section .intro .name {
+  body .intro-section .intro .name {
     font-size: 55px;
   }
-  .intro-section .intro .name .light {
+  body .intro-section .intro .name .light {
     letter-spacing: 0px;
     margin-right: 10px;
   }
-  .intro-section .intro .name .bold {
+  body .intro-section .intro .name .bold {
     letter-spacing: 0px;
   }
-  .intro-section .intro .role {
+  body .intro-section .intro .role {
     font-size: 35px;
     letter-spacing: 2px;
   }
-  main {
+  body main {
     width: 90%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     row-gap: 15px;
   }
-  main figure {
+  body main figure {
     width: 100%;
     justify-content: center;
   }
-  .third-section {
+  body .third-section {
     margin-top: -35px;
     gap: 190px;
   }
-  .third-section .logo-section {
+  body .third-section .logo-section {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 90px;
   }
-  .third-section .logo-section h1 {
+  body .third-section .logo-section h1 {
     font-size: 35px;
   }
-  .third-section .logo-section div {
+  body .third-section .logo-section div {
     justify-content: space-evenly;
     flex-wrap: wrap;
     -moz-column-gap: 100px;
          column-gap: 100px;
     row-gap: 100px;
   }
-  .spotify {
+  body .spotify {
     flex-basis: 115px;
   }
-  .audi, .mont_blanc {
+  body .audi, body .mont_blanc {
     flex-basis: 100px;
   }
-  .addidas {
+  body .addidas {
     flex-basis: 70px;
     flex-shrink: 0;
     margin-left: 20px;
   }
-  .lufthansa {
+  body .lufthansa {
     flex-basis: 132px;
   }
-  .ikea {
+  body .ikea {
     flex-basis: 120px;
   }
-  .final-section {
+  body .final-section {
     margin-top: 10px;
     gap: 48px;
   }
-  .final-section .divider {
+  body .final-section .divider {
     gap: 25px;
   }
-  .final-section .divider div:nth-child(1) {
+  body .final-section .divider div:nth-child(1) {
     flex-grow: 0;
     width: 23px;
   }
-  .final-section .divider div:nth-child(2) {
+  body .final-section .divider div:nth-child(2) {
     flex-grow: 0;
     width: 145px;
   }
-  .final-section .iconContainer {
+  body .final-section .icon-container {
     width: 100%;
   }
-  .final-section .iconContainer div {
+  body .final-section .icon-container div {
     height: 58px;
     width: 58px;
     border: white solid 2px;
   }
-  .final-section .iconContainer div i {
+  body .final-section .icon-container div i {
     font-size: 35px;
   }
-  .final-section .final-quote {
+  body .final-section .final-quote {
     margin-top: -20px;
     margin-bottom: 60px;
   }
